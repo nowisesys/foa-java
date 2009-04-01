@@ -9,7 +9,6 @@
  * GNU Classpath Exception. See the file COPYING and COPYING.CLASSPATH bundled
  * with the foa-java source or visit http://www.gnu.org
  */
-
 package se.uu.bmc.it.foa;
 
 import org.junit.After;
@@ -49,13 +48,13 @@ public class MemoryStrategyTest {
      */
     @Test
     public void testGetInitSize() {
-        System.out.println("getInitSize");
+        System.out.println("getInitSize()");
+        System.out.println("-- Testing default init size");
         MemoryStrategy instance = new MemoryStrategy();
-        int expResult = 0;
-        int result = instance.getInitSize();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(MemoryStrategy.INIT_SIZE, instance.getInitSize());
+        System.out.println("-- Testing custom init size");
+        instance = new MemoryStrategy(1024, 2048);
+        assertEquals(1024, instance.getInitSize());
     }
 
     /**
@@ -63,12 +62,12 @@ public class MemoryStrategyTest {
      */
     @Test
     public void testSetInitSize() {
-        System.out.println("setInitSize");
-        int initSize = 0;
+        System.out.println("setInitSize()");
         MemoryStrategy instance = new MemoryStrategy();
-        instance.setInitSize(initSize);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        instance.setInitSize(1024);
+        assertEquals(1024, instance.getInitSize());
+        instance.setInitSize(0);
+        assertEquals(0, instance.getInitSize());
     }
 
     /**
@@ -76,13 +75,13 @@ public class MemoryStrategyTest {
      */
     @Test
     public void testGetStepSize() {
-        System.out.println("getStepSize");
+        System.out.println("getStepSize()");
+        System.out.println("-- Testing default step size");
         MemoryStrategy instance = new MemoryStrategy();
-        int expResult = 0;
-        int result = instance.getStepSize();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(MemoryStrategy.STEP_SIZE, instance.getStepSize());
+        System.out.println("-- Testing custom step size");
+        instance = new MemoryStrategy(1024, 2048);
+        assertEquals(2048, instance.getStepSize());
     }
 
     /**
@@ -90,12 +89,12 @@ public class MemoryStrategyTest {
      */
     @Test
     public void testSetStepSize() {
-        System.out.println("setStepSize");
-        int stepSize = 0;
+        System.out.println("setStepSize()");
         MemoryStrategy instance = new MemoryStrategy();
-        instance.setStepSize(stepSize);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        instance.setStepSize(1024);
+        assertEquals(1024, instance.getStepSize());
+        instance.setStepSize(0);
+        assertEquals(0, instance.getStepSize());
     }
 
     /**
@@ -103,13 +102,13 @@ public class MemoryStrategyTest {
      */
     @Test
     public void testGetMaxSize() {
-        System.out.println("getMaxSize");
+        System.out.println("getMaxSize()");
+        System.out.println("-- Testing default max size");
         MemoryStrategy instance = new MemoryStrategy();
-        int expResult = 0;
-        int result = instance.getMaxSize();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(MemoryStrategy.MAX_SIZE, instance.getMaxSize());
+        System.out.println("-- Testing custom max size");
+        instance = new MemoryStrategy(1024, 2048, 4096);
+        assertEquals(4096, instance.getMaxSize());
     }
 
     /**
@@ -117,12 +116,12 @@ public class MemoryStrategyTest {
      */
     @Test
     public void testSetMaxSize() {
-        System.out.println("setMaxSize");
-        int maxSize = 0;
+        System.out.println("setMaxSize()");
         MemoryStrategy instance = new MemoryStrategy();
-        instance.setMaxSize(maxSize);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        instance.setMaxSize(1024);
+        assertEquals(1024, instance.getMaxSize());
+        instance.setMaxSize(0);
+        assertEquals(0, instance.getMaxSize());
     }
 
     /**
@@ -133,8 +132,6 @@ public class MemoryStrategyTest {
         System.out.println("setUnlimited");
         MemoryStrategy instance = new MemoryStrategy();
         instance.setUnlimited();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(MemoryStrategy.UNLIMITED, instance.getMaxSize());
     }
-
 }
