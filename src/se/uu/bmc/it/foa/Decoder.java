@@ -253,17 +253,18 @@ public class Decoder {
             if (stream == null) {
                 return null;
             }
-            ppos = 0;
-            for (int i = 0; i < buffer.length; ++i) {
+            for (ppos = 0; ppos < buffer.length;) {
                 int c = stream.read();
                 if (c == -1) {
                     return null;     // End of stream.
                 }
                 if (c == '\n') {
                     ++line;
-                    return decode(0, i);
+                    return decode(0, ppos);
                 }
-                if (i == buffer.length - 1) {
+                buffer[ppos++] = (byte) c;
+
+                if (ppos == buffer.length) {
                     // Attempt to grow the input buffer:
                     int size = buffer.length + strategy.getStepSize();
                     if (strategy.getMaxSize() >= size &&
@@ -272,7 +273,6 @@ public class Decoder {
                     }
                     resize(size);
                 }
-                buffer[i] = (byte) c;
             }
         }
         return null;
@@ -330,11 +330,11 @@ public class Decoder {
         if (escape) {
             StringBuilder builder = new StringBuilder(str);
             String replace = "([])=";
-            for(int i = 0; i < replace.length(); ++i) {
+            for (int i = 0; i < replace.length(); ++i) {
                 char key = replace.charAt(i);
                 String enc = map.getEncoded(key);
                 int pos = builder.indexOf(enc);
-                while(pos != -1) {
+                while (pos != -1) {
                     builder.replace(pos, pos + 3, String.valueOf(key));
                     pos = builder.indexOf(enc, pos);
                 }
@@ -374,15 +374,12 @@ public class Decoder {
         }
         this.buffer = buff;
     }
-
     private Reader stream;
     private MemoryStrategy strategy;
     private EntityMap map = new EntityMap();
-
     private byte[] buffer;  // The data buffer.
     private int ppos;       // Put data position (when reading stream)
     private int line;       // The current line.
     private boolean extern; // True if buffer is external.
-    
     private boolean escape = true; // Escape data or not.
 }
