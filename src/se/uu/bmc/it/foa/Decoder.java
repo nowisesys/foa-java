@@ -328,6 +328,9 @@ public class Decoder {
      */
     private String getEscaped(String str) {
         if (escape) {
+            if(str.indexOf('%') == -1) {
+                return str;     // No escaped data in the string.
+            }
             StringBuilder builder = new StringBuilder(str);
             String replace = "([])=";
             for (int i = 0; i < replace.length(); ++i) {
