@@ -154,14 +154,14 @@ public class Decoder {
     public void setStrategy(MemoryStrategy strategy) throws DecoderException {
         if (strategy != null) {
             if (strategy.getMaxSize() < ppos &&
-                strategy.getMaxSize() != MemoryStrategy.UNLIMITED) {
+                    strategy.getMaxSize() != MemoryStrategy.UNLIMITED) {
                 throw new DecoderException("Setting the memory allocation strategy would truncate data in the input buffer.");
             }
             if (buffer == null) {
                 buffer = new byte[strategy.getInitSize()];
             }
             if (strategy.getMaxSize() < this.buffer.length &&
-                strategy.getMaxSize() != MemoryStrategy.UNLIMITED) {
+                    strategy.getMaxSize() != MemoryStrategy.UNLIMITED) {
                 resize(strategy.getMaxSize());
             }
         }
@@ -272,6 +272,7 @@ public class Decoder {
                     }
                     resize(size);
                 }
+                buffer[i] = (byte) c;
             }
         }
         return null;
@@ -326,11 +327,12 @@ public class Decoder {
      * @return An unescaped string.
      */
     private String getEscaped(String str) {
-        if(escape) {
-            str.replaceAll(String.format("%%%X", new Integer('(')), "(");
-            str.replaceAll(String.format("%%%X", new Integer('[')), "[");
-            str.replaceAll(String.format("%%%X", new Integer(']')), "]");
-            str.replaceAll(String.format("%%%X", new Integer(')')), ")");
+        if (escape) {
+            str = str.replaceAll(String.format("%%%X", new Integer('(')), "(");
+            str = str.replaceAll(String.format("%%%X", new Integer('[')), "[");
+            str = str.replaceAll(String.format("%%%X", new Integer(']')), "]");
+            str = str.replaceAll(String.format("%%%X", new Integer(')')), ")");
+            str = str.replaceAll(String.format("%%%X", new Integer('=')), "=");
         }
         return str;
     }
