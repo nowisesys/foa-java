@@ -109,10 +109,32 @@ public class EncoderTest {
     public void testWrite_String() throws Exception {
         System.out.println("write(String)");
         Encoder instance = new Encoder();
-        instance.write("data");
-        assertEquals("data\n", instance.getBuffer());
-        instance.write("(a[b]c)d=e");
-        assertEquals("%28a%5Bb%5Dc%29d%3De\n", instance.getBuffer());
+        Option option = Encoder.Option.EnableEscape;
+
+        String str1 = "some text";
+        String str2 = "(([[]]))==()[]=(]([=";
+        String data = "(a[b]c)d=e";
+        String denc = "%28a%5Bb%5Dc%29d%3De";
+
+        System.out.println("-- Testing with escape enabled");
+        instance.setOption(option, true);
+        instance.write(data);
+        assertEquals(denc + "\n", instance.getBuffer());
+        instance.write(denc);
+        assertEquals(denc + "\n", instance.getBuffer());
+        instance.write(str1);
+        assertEquals(str1 + "\n", instance.getBuffer());
+
+        System.out.println("-- Testing with escape disabled");
+        instance.setOption(option, false);
+        instance.write(data);
+        assertEquals(data + "\n", instance.getBuffer());
+        instance.write(denc);
+        assertEquals(denc + "\n", instance.getBuffer());
+        instance.write(str2);
+        assertEquals(str2 + "\n", instance.getBuffer());
+        instance.write(str2);
+        assertEquals(str2 + "\n", instance.getBuffer());
     }
 
     /**
@@ -144,8 +166,53 @@ public class EncoderTest {
     public void testWrite_String_String() throws Exception {
         System.out.println("write(String, String)");
         Encoder instance = new Encoder();
-        instance.write("name", "data");
-        assertEquals("name = data\n", instance.getBuffer());
+        Option option = Encoder.Option.EnableEscape;
+
+        String name = "name";
+        String data = "(a[b]c)d=e";
+        String denc = "%28a%5Bb%5Dc%29d%3De";
+
+        System.out.println("-- Testing with escape enabled");
+        instance.setOption(option, true);
+        instance.write(name, data);
+        assertEquals(name + " = " + denc + "\n", instance.getBuffer());
+        instance.write(name, denc);
+        assertEquals(name + " = " + denc + "\n", instance.getBuffer());
+        instance.write(name, name);
+        assertEquals(name + " = " + name + "\n", instance.getBuffer());
+        instance.write(data, data);
+        assertEquals(data + " = " + denc + "\n", instance.getBuffer());
+        instance.write(data, denc);
+        assertEquals(data + " = " + denc + "\n", instance.getBuffer());
+        instance.write(data, name);
+        assertEquals(data + " = " + name + "\n", instance.getBuffer());
+        instance.write(denc, data);
+        assertEquals(denc + " = " + denc + "\n", instance.getBuffer());
+        instance.write(denc, denc);
+        assertEquals(denc + " = " + denc + "\n", instance.getBuffer());
+        instance.write(denc, name);
+        assertEquals(denc + " = " + name + "\n", instance.getBuffer());
+
+        System.out.println("-- Testing with escape disabled");
+        instance.setOption(option, false);
+        instance.write(name, data);
+        assertEquals(name + " = " + data + "\n", instance.getBuffer());
+        instance.write(name, denc);
+        assertEquals(name + " = " + denc + "\n", instance.getBuffer());
+        instance.write(name, name);
+        assertEquals(name + " = " + name + "\n", instance.getBuffer());
+        instance.write(data, data);
+        assertEquals(data + " = " + data + "\n", instance.getBuffer());
+        instance.write(data, denc);
+        assertEquals(data + " = " + denc + "\n", instance.getBuffer());
+        instance.write(data, name);
+        assertEquals(data + " = " + name + "\n", instance.getBuffer());
+        instance.write(denc, data);
+        assertEquals(denc + " = " + data + "\n", instance.getBuffer());
+        instance.write(denc, denc);
+        assertEquals(denc + " = " + denc + "\n", instance.getBuffer());
+        instance.write(denc, name);
+        assertEquals(denc + " = " + name + "\n", instance.getBuffer());
     }
 
     /**
@@ -178,12 +245,18 @@ public class EncoderTest {
         System.out.println("setOption(Option, boolean)");
         Encoder instance = new Encoder();
         Option option = Option.EnableEscape;
+
+        System.out.println("-- Test disable escape");
         boolean val = false;
         instance.setOption(option, val);
         assertEquals(val, instance.getOption(option));
+
+        System.out.println("-- Test enable escape");
         val = true;
         instance.setOption(option, val);
         assertEquals(val, instance.getOption(option));
+
+        // Test encoding is in respective write() test.
     }
 
     /**

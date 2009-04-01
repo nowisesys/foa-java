@@ -149,12 +149,64 @@ public class DecoderTest {
         System.out.println("setOption(Option, boolean)");
         Decoder instance = new Decoder();
         Option option = Decoder.Option.EnableEscape;
-        boolean val = false;
-        instance.setOption(option, val);
-        assertEquals(val, instance.getOption(option));
-        val = true;
-        instance.setOption(option, val);
-        assertEquals(val, instance.getOption(option));
+
+        System.out.println("-- Test disable escape");
+        instance.setOption(option, false);
+        assertEquals(false, instance.getOption(option));
+
+        System.out.println("-- Test enable escape");
+        instance.setOption(option, true);
+        assertEquals(true, instance.getOption(option));
+
+        // Test decoding:
+        Entity entity;
+        String name = "name";
+        String data = "a%28b%5Bc%5Dd%29e%3D";
+        String ddec = "a(b[c]d)e=";
+
+        System.out.println("-- Test decode (with escape enabled)");
+        instance.setOption(option, true);
+        instance.setBuffer(name + "=" + data + "\n");
+        entity = instance.read();
+        assertEquals(name, entity.getName());
+        assertEquals(ddec, entity.getData());
+
+        instance.setBuffer(name + "=" + name + "\n");
+        entity = instance.read();
+        assertEquals(name, entity.getName());
+        assertEquals(name, entity.getData());
+
+        instance.setBuffer(data + "=" + name + "\n");
+        entity = instance.read();
+        assertEquals(data, entity.getName());
+        assertEquals(name, entity.getData());
+
+        instance.setBuffer(data + "=" + data + "\n");
+        entity = instance.read();
+        assertEquals(data, entity.getName());
+        assertEquals(ddec, entity.getData());
+
+        System.out.println("-- Test decode (with escape disabled)");
+        instance.setOption(option, false);
+        instance.setBuffer(name + "=" + data + "\n");
+        entity = instance.read();
+        assertEquals(name, entity.getName());
+        assertEquals(data, entity.getData());
+
+        instance.setBuffer(name + "=" + name + "\n");
+        entity = instance.read();
+        assertEquals(name, entity.getName());
+        assertEquals(name, entity.getData());
+
+        instance.setBuffer(data + "=" + name + "\n");
+        entity = instance.read();
+        assertEquals(data, entity.getName());
+        assertEquals(name, entity.getData());
+
+        instance.setBuffer(data + "=" + data + "\n");
+        entity = instance.read();
+        assertEquals(data, entity.getName());
+        assertEquals(data, entity.getData());
     }
 
     /**
