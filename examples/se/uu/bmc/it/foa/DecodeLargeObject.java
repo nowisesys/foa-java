@@ -38,6 +38,7 @@ public class DecodeLargeObject {
     void run() throws IOException, DecoderException {
         String obj = "(\nname=adam\nage=35\n)\n";
         StringBuilder str = new StringBuilder();
+        int count = 0;
 
         System.out.print("Initilizing string of " + num + " objects... ");
         System.out.flush();
@@ -57,15 +58,17 @@ public class DecodeLargeObject {
         System.out.flush();
         Entity entity;
         while ((entity = decoder.read()) != null) {
+            ++count;
         }
         System.out.println("done");
+        System.out.println("Decoded " + count + " entities total.");
     }
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int num = 2000000;
+        int num = 3000000;
         if (args.length != 0) {
             num = Integer.parseInt(args[0]);
         }
