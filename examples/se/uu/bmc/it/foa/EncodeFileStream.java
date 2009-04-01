@@ -15,9 +15,8 @@
  *
  * Created: Mar 31, 2009, 1:54:16 AM
  * Author:  Anders Lövgren (QNET/BMC CompDept)
- */
-
-/*
+ *
+ * Description:
  * Demonstrate how to write encoded data to a file stream.
  */
 package se.uu.bmc.it.foa;
@@ -27,18 +26,20 @@ import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/**
- *
- * @author Anders Lövgren (QNET/BMC CompDept)
- */
 public class EncodeFileStream {
 
     private String file;
 
+    /**
+     * Setup example parameters.
+     */
     EncodeFileStream(String file) {
         this.file = file;
     }
 
+    /**
+     * Run example code.
+     */
     public void run() throws IOException {
         FileWriter stream = new FileWriter(file);
         Encoder encoder = new Encoder(new BufferedWriter(stream));

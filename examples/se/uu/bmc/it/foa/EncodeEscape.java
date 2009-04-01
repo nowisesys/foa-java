@@ -15,27 +15,29 @@
  *
  * Created: Mar 31, 2009, 12:20:02 AM
  * Author:  Anders Lövgren (QNET/BMC CompDept)
- */
-
-/*
+ *
+ * Description:
  * Test escaping of special chars in output.
  */
+
 package se.uu.bmc.it.foa;
 
 import java.io.OutputStreamWriter;
 import java.io.IOException;
 
-/**
- *
- * @author Anders Lövgren (QNET/BMC CompDept)
- */
 public class EncodeEscape {
     private String data;
 
+    /**
+     * Setup example parameters.
+     */
     EncodeEscape(String data) {
         this.data = data;
     }
 
+    /**
+     * Run example code.
+     */
     void run() throws IOException, EncoderException {
         OutputStreamWriter stream = new OutputStreamWriter(System.out);
         Encoder encoder = new Encoder(stream);

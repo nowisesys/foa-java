@@ -15,27 +15,29 @@
  *
  * Created: Apr 1, 2009, 12:39:36 AM
  * Author:  Anders Lövgren (QNET/BMC CompDept)
- */
-
-/*
+ *
+ * Description:
  * Demonstrate decoding an string buffer.
  */
+
 package se.uu.bmc.it.foa;
 
 import java.io.IOException;
 
-/**
- *
- * @author Anders Lövgren (QNET/BMC CompDept)
- */
 public class DecodeStringBuffer {
 
     private String buffer;
 
+    /**
+     * Setup example parameters.
+     */
     DecodeStringBuffer(String buffer) {
         this.buffer = buffer;
     }
 
+    /**
+     * Run example code.
+     */
     public void run() throws IOException, DecoderException {
         Decoder decoder = new Decoder(buffer);
         Entity entity;
@@ -51,7 +53,7 @@ public class DecodeStringBuffer {
     }
 
     /**
-     * @param args The command line arguments
+     * @param args The command line arguments.
      */
     public static void main(String[] args) {
         String buffer = "persons = [\n(\nname=adam\nage = 37\n)\n(\nname=bertil\nage=45\n)\n]\n";
