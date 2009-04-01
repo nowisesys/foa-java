@@ -328,11 +328,11 @@ public class Decoder {
      */
     private String getEscaped(String str) {
         if (escape) {
-            str = str.replaceAll(String.format("%%%X", new Integer('(')), "(");
-            str = str.replaceAll(String.format("%%%X", new Integer('[')), "[");
-            str = str.replaceAll(String.format("%%%X", new Integer(']')), "]");
-            str = str.replaceAll(String.format("%%%X", new Integer(')')), ")");
-            str = str.replaceAll(String.format("%%%X", new Integer('=')), "=");
+            str = str.replaceAll(map.getEncoded('('), "(");
+            str = str.replaceAll(map.getEncoded('['), "[");
+            str = str.replaceAll(map.getEncoded(']'), "]");
+            str = str.replaceAll(map.getEncoded(')'), ")");
+            str = str.replaceAll(map.getEncoded('='), "=");
         }
         return str;
     }
@@ -367,11 +367,15 @@ public class Decoder {
         }
         this.buffer = buff;
     }
+
     private Reader stream;
     private MemoryStrategy strategy;
+    private EntityMap map = new EntityMap();
+
     private byte[] buffer;  // The data buffer.
     private int ppos;       // Put data position (when reading stream)
     private int line;       // The current line.
     private boolean extern; // True if buffer is external.
+    
     private boolean escape = true; // Escape data or not.
 }
