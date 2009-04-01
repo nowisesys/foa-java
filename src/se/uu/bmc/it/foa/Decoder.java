@@ -328,11 +328,18 @@ public class Decoder {
      */
     private String getEscaped(String str) {
         if (escape) {
-            str = str.replaceAll(map.getEncoded('('), "(");
-            str = str.replaceAll(map.getEncoded('['), "[");
-            str = str.replaceAll(map.getEncoded(']'), "]");
-            str = str.replaceAll(map.getEncoded(')'), ")");
-            str = str.replaceAll(map.getEncoded('='), "=");
+            StringBuilder builder = new StringBuilder(str);
+            String replace = "([])=";
+            for(int i = 0; i < replace.length(); ++i) {
+                char key = replace.charAt(i);
+                String enc = map.getEncoded(key);
+                int pos = builder.indexOf(enc);
+                while(pos != -1) {
+                    builder.replace(pos, pos + 3, String.valueOf(key));
+                    pos = builder.indexOf(enc, pos);
+                }
+            }
+            return builder.toString();
         }
         return str;
     }
