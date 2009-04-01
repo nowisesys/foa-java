@@ -1,0 +1,37 @@
+This is an Java (tm) library implementing the FOA encoding/decoding method.
+
+** THE FOA LIBRARY:
+
+   The offical name of this java library is 'FOA Java Library', and its
+   project name is foa-java.
+
+** WHAT IS FOA?:
+   
+   FOA stands for Fast Object and Array encoding/decoding and is an method
+   for efficient data exchange between applications and/or hosts. 
+   
+   It can be used as an alternative to XML for web services, as an building 
+   block for object oriented network protocols or as an generic object 
+   serializing method (i.e. write objects in C++ and read them back in Java).
+   
+** SPECIFICATION:
+   
+   This library (foa-java) implements version 1.0 of the FOA specification. 
+   The spec can be found here: http://it.bmc.uu.se/andlov/proj/libfoa/spec.php
+   
+** LICENSE:
+
+   The FOA java library (foa-java) is distributed under GPL-3 (GNU General 
+   Public License) with the GNU Classpath Exception. 
+   
+   Thus, you are free to use this java library without requirements to release 
+   you own application as GPL. You are even permitted to use foa-java in
+   closed source, commercial applications.
+
+** COPYRIGHT:
+
+   The source for the FOA Java Library is copyrighted (C) 2009 by Anders Lövgren 
+   and BMC Computing Department, Uppsala University, with equal shared rights 
+   unless otherwise explicit stated (in the source).
+
+// Anders Lövgren, 2009-03-30

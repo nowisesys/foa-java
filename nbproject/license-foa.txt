@@ -1,0 +1,15 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix}Copyright (C) 2009 by Anders Lövgren and the Computing Department at BMC,
+${licensePrefix}Uppsala University.
+${licensePrefix}
+${licensePrefix}FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
+${licensePrefix}specification: http://it.bmc.uu.se/andlov/proj/libfoa/spec.php
+${licensePrefix}
+${licensePrefix}This source is released under GPL3 (GNU General Public License) with the
+${licensePrefix}GNU Classpath Exception. See the file COPYING and COPYING.CLASSPATH bundled
+${licensePrefix}with the foa-java source or visit http://www.gnu.org
+<#if licenseLast??>
+${licenseLast}
+</#if>
