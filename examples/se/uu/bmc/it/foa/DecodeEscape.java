@@ -33,28 +33,28 @@ public class DecodeEscape {
         Entity entity;
 
         System.out.println("\n** escape " + decoder.getOption(Decoder.Option.EnableEscape) + ":");
-        decoder.setBuffer("name=a%28b%5Bc%29d%5De%3D\n");
+        decoder.setBuffer("name=a%28b%5Bc%5Dd%29e%3D\n");
         if ((entity = decoder.read()) != null) {
             System.out.println("\nbuffer: '" + new String(decoder.getBuffer()).trim() + "'");
             System.out.println("  name: '" + entity.getName() + "'");
             System.out.println("  data: '" + entity.getData() + "'");
         }
 
-        decoder.setBuffer("a%28b%5Bc%29d%5De%3D=name\n");
+        decoder.setBuffer("a%28b%5Bc%5Dd%29e%3D=name\n");
         if ((entity = decoder.read()) != null) {
             System.out.println("\nbuffer: '" + new String(decoder.getBuffer()).trim() + "'");
             System.out.println("  name: '" + entity.getName() + "'");
             System.out.println("  data: '" + entity.getData() + "'");
         }
 
-        decoder.setBuffer("a%28b%5Bc%29d%5De%3D=a%28b%5Bc%29d%5De%3D\n");
+        decoder.setBuffer("a%28b%5Bc%5Dd%29e%3D=a%28b%5Bc%5Dd%29e%3D\n");
         if ((entity = decoder.read()) != null) {
             System.out.println("\nbuffer: '" + new String(decoder.getBuffer()).trim() + "'");
             System.out.println("  name: '" + entity.getName() + "'");
             System.out.println("  data: '" + entity.getData() + "'");
         }
 
-        decoder.setBuffer("name=name=a%28b%5Bc%29d%5De%3D\n");
+        decoder.setBuffer("name=name=a%28b%5Bc%5Dd%29e%3D\n");
         if ((entity = decoder.read()) != null) {
             System.out.println("\nbuffer: '" + new String(decoder.getBuffer()).trim() + "'");
             System.out.println("  name: '" + entity.getName() + "'");
@@ -63,7 +63,7 @@ public class DecodeEscape {
         
         decoder.setOption(Decoder.Option.EnableEscape, false);
         System.out.println("\n** escape " + decoder.getOption(Decoder.Option.EnableEscape) + ":");
-        decoder.setBuffer("name=a%28b%5Bc%29d%5De%3D\n");
+        decoder.setBuffer("name=a%28b%5Bc%5Dd%29e%3D\n");
         if ((entity = decoder.read()) != null) {
             System.out.println("\nbuffer: '" + new String(decoder.getBuffer()).trim() + "'");
             System.out.println("  name: '" + entity.getName() + "'");
