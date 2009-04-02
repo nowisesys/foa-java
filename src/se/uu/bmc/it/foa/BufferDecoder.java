@@ -34,7 +34,7 @@ public class BufferDecoder {
      * @param buffer The external buffer.
      */
     public BufferDecoder(byte[] buffer) {
-        decoder = new Decoder();
+        decoder = new Decoder(buffer);
     }
 
     /**
