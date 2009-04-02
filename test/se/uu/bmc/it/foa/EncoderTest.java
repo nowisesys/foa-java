@@ -10,10 +10,6 @@
  * with the foa-java source or visit http://www.gnu.org
  */
 
-/*
- * Unit test (junit) of class Encoder.
- */
-
 package se.uu.bmc.it.foa;
 
 import java.io.Writer;
@@ -27,7 +23,8 @@ import se.uu.bmc.it.foa.Encoder.Option;
 import se.uu.bmc.it.foa.Entity.SpecialChar;
 
 /**
- *
+ * Unit test for class Encoder.
+ * 
  * @author Anders Lövgren (QNET/BMC CompDept)
  */
 public class EncoderTest {

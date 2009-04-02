@@ -23,7 +23,8 @@ import static org.junit.Assert.*;
 import se.uu.bmc.it.foa.Decoder.Option;
 
 /**
- *
+ * Unit test for class Decoder.
+ * 
  * @author Anders Lövgren (QNET/BMC CompDept)
  */
 public class DecoderTest {

@@ -10,10 +10,6 @@
  * with the foa-java source or visit http://www.gnu.org
  */
 
-/*
- * Unit test (junit) of class Entity.
- */
-
 package se.uu.bmc.it.foa;
 
 import org.junit.After;
@@ -25,6 +21,7 @@ import static org.junit.Assert.*;
 import se.uu.bmc.it.foa.Entity.Type;
 
 /**
+ * Unit test (junit) of class Entity.
  *
  * @author Anders Lövgren (QNET/BMC CompDept)
  */

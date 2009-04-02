@@ -19,7 +19,8 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- *
+ * Unit test for class MemoryStrategy.
+ * 
  * @author Anders Lövgren (QNET/BMC CompDept)
  */
 public class MemoryStrategyTest {
