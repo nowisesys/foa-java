@@ -235,6 +235,9 @@ public class Decoder {
      */
     public Entity read() throws IOException, DecoderException {
         if (extern) {
+            if (buffer == null) {
+                return null;
+            }
             int start = ppos;
             for (int i = ppos; i < buffer.length; ++i) {
                 if (buffer[i] == '\n') {
@@ -328,7 +331,7 @@ public class Decoder {
      */
     private String getEscaped(String str) {
         if (escape) {
-            if(str.indexOf('%') == -1) {
+            if (str.indexOf('%') == -1) {
                 return str;     // No escaped data in the string.
             }
             StringBuilder builder = new StringBuilder(str);
