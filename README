@@ -2,8 +2,12 @@ This is an Java (tm) library implementing the FOA encoding/decoding method.
 
 ** THE FOA LIBRARY:
 
-   The offical name of this java library is 'FOA Java Library', and its
-   project name is foa-java.
+   The offical name of this java library is 'FOA Java Library' and foa-java
+   is its project name. 
+
+   The two first numbers in the version number is the FOA specification the 
+   library implement, the last number is the revision (build) number of the
+   library.
 
 ** WHAT IS FOA?:
    
