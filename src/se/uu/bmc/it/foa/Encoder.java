@@ -89,7 +89,12 @@ public class Encoder {
      * @throws java.io.IOException
      */
     public void write(String name, Entity.SpecialChar spec) throws IOException {
-        buffer = name + " = " + spec.getValue() + "\n";
+        if (spec == Entity.SpecialChar.StartObject ||
+            spec == Entity.SpecialChar.StartArray) {
+            buffer = name + " = " + spec.getValue() + "\n";
+        } else {
+            buffer = spec.getValue() + "\n";
+        }
         if (stream != null) {
             stream.write(buffer);
         }
@@ -234,7 +239,6 @@ public class Encoder {
 
         EnableEscape
     }
-    
     private Writer stream;
     private String buffer;
     private boolean escape = true;
