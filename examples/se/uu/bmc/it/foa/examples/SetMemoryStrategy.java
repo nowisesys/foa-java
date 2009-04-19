@@ -19,7 +19,9 @@
  * Description:
  * Demonstration on various aspects of the MemoryStrategy class.
  */
-package se.uu.bmc.it.foa;
+package se.uu.bmc.it.foa.examples;
+
+import se.uu.bmc.it.foa.*;
 
 public class SetMemoryStrategy {
 

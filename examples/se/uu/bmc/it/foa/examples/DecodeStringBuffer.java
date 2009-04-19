@@ -20,8 +20,9 @@
  * Demonstrate decoding an string buffer.
  */
 
-package se.uu.bmc.it.foa;
+package se.uu.bmc.it.foa.examples;
 
+import se.uu.bmc.it.foa.*;
 import java.io.IOException;
 
 public class DecodeStringBuffer {

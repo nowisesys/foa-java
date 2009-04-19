@@ -22,8 +22,9 @@
  * decoded character.
  *
  */
-package se.uu.bmc.it.foa;
+package se.uu.bmc.it.foa.examples;
 
+import se.uu.bmc.it.foa.*;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.FileNotFoundException;

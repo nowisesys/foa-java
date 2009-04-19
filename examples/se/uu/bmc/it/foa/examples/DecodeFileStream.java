@@ -19,8 +19,9 @@
  * Description:
  * Demonstrate how to decode an file input stream.
  */
-package se.uu.bmc.it.foa;
+package se.uu.bmc.it.foa.examples;
 
+import se.uu.bmc.it.foa.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;

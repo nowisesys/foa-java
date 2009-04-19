@@ -20,8 +20,9 @@
  * Show how to encode an array of objects (persons)
  */
 
-package se.uu.bmc.it.foa;
+package se.uu.bmc.it.foa.examples;
 
+import se.uu.bmc.it.foa.*;
 import java.io.OutputStreamWriter;
 import java.io.IOException;
 

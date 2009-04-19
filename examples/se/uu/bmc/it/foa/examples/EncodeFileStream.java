@@ -19,8 +19,9 @@
  * Description:
  * Demonstrate how to write encoded data to a file stream.
  */
-package se.uu.bmc.it.foa;
+package se.uu.bmc.it.foa.examples;
 
+import se.uu.bmc.it.foa.*;
 import java.io.FileWriter;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;

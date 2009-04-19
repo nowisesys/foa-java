@@ -20,8 +20,9 @@
  * Test parsing a large object. Running this example might generate an
  * OutOfMemoryError exception.
  */
-package se.uu.bmc.it.foa;
+package se.uu.bmc.it.foa.examples;
 
+import se.uu.bmc.it.foa.*;
 import java.io.IOException;
 
 public class DecodeLargeObject {

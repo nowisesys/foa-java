@@ -25,8 +25,9 @@
  * data gets flushed to the underlying stream (can be important in some
  * situations, i.e. when doing output buffring on web applications).
  */
-package se.uu.bmc.it.foa;
+package se.uu.bmc.it.foa.examples;
 
+import se.uu.bmc.it.foa.*;
 import java.io.StringWriter;
 import java.io.IOException;
 
