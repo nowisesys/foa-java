@@ -1,14 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
-        <file>file:/home/andlov/Develop/NetBeans/FOA/examples/se/uu/bmc/it/foa/DecodeStringBuffer.java</file>
-        <file>file:/home/andlov/Develop/NetBeans/FOA/src/se/uu/bmc/it/foa/BufferDecoder.java</file>
-        <file>file:/home/andlov/Develop/NetBeans/FOA/src/se/uu/bmc/it/foa/Decoder.java</file>
-        <file>file:/home/andlov/Develop/NetBeans/FOA/src/se/uu/bmc/it/foa/Encoder.java</file>
-        <file>file:/home/andlov/Develop/NetBeans/FOA/src/se/uu/bmc/it/foa/Entity.java</file>
-        <file>file:/home/andlov/Develop/NetBeans/FOA/src/se/uu/bmc/it/foa/StreamDecoder.java</file>
-        <file>file:/home/andlov/Develop/NetBeans/FOA/test/se/uu/bmc/it/foa/DecoderTest.java</file>
-        <file>file:/home/andlov/Develop/NetBeans/FOA/test/se/uu/bmc/it/foa/MemoryStrategyTest.java</file>
-    </open-files>
 </project-private>
