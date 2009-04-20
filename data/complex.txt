@@ -1,0 +1,35 @@
+result = (
+  state = success
+  type = link
+  data = [
+  link = (
+    href = http://localhost/batchelor/ws/rest/queue
+    get = link
+    put = job
+  )
+  link = (
+    href = http://localhost/batchelor/ws/rest/result
+    get = link
+  )
+  link = (
+    href = http://localhost/batchelor/ws/rest/watch
+    get = link
+  )
+  link = (
+    href = http://localhost/batchelor/ws/rest/errors
+    get = link
+  )
+  link = (
+    href = http://localhost/batchelor/ws/rest/suspend
+    get = link
+  )
+  link = (
+    href = http://localhost/batchelor/ws/rest/resume
+    get = link
+  )
+  link = (
+    href = http://localhost/batchelor/ws/rest/version
+    get = version
+  )
+  ]
+)
