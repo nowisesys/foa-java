@@ -302,7 +302,7 @@ public class Decoder {
             data = str.substring(index + 1).trim();
         } else {
             name = null;
-            data = str;
+            data = str.trim();
         }
 
         if (data.length() == 1) {
