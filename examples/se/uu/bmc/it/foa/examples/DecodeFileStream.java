@@ -52,11 +52,13 @@ public class DecodeFileStream {
                     System.out.println("[" +
                             entity.getLine() + "]: " +
                             entity.getName() + " = " +
-                            entity.getData());
+                            entity.getData() + " (" +
+                            entity.getType() + ")");
                 } else {
                     System.out.println("[" +
                             entity.getLine() + "]: " +
-                            entity.getData());
+                            entity.getData() + " (" +
+                            entity.getType() + ")");
                 }
             }
 
@@ -69,7 +71,7 @@ public class DecodeFileStream {
      * @param args The command line arguments.
      */
     public static void main(String[] args) {
-        String file = "person.txt";
+        String file = "data/person.txt";
         if (args.length != 0) {
             file = args[0];
         }
