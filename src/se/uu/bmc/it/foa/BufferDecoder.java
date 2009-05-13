@@ -54,7 +54,7 @@ public class BufferDecoder {
     }
 
     /**
-     * Set the string to read entities from. This is a convenient method for
+     * Set the string to read entities from. This is a convenience method for
      * setBuffer(byte[]).
      * @param str The string to decode.
      */
@@ -94,7 +94,7 @@ public class BufferDecoder {
      * @return The next entity or null if no more entities exist in buffer.
      * @throws IOException
      * @throws se.uu.bmc.it.foa.DecoderException
-     * @see Decoder.read() for details.
+     * @see se.uu.bmc.it.foa.Decoder#read() for details.
      */
     public Entity read() throws IOException, DecoderException {
         return decoder.read();

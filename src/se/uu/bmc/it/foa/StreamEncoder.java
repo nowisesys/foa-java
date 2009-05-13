@@ -41,7 +41,7 @@ public class StreamEncoder {
     /**
      * Sets an new output stream for encoded entities.
      * @param stream The output stream.
-     * @see StreamEncoder(Writer)
+     * @see se.uu.bmc.it.foa.StreamEncoder#StreamEncoder(java.io.Writer)
      */
     public void setStream(Writer stream) {
         encoder.setStream(stream);
@@ -77,8 +77,8 @@ public class StreamEncoder {
 
     /**
      * Write an anonymous special char entity to the stream.
-     * @param type The special char.
-     * @see Entity.SpecialChar
+     * @param spec The special char.
+     * @see se.uu.bmc.it.foa.Entity.SpecialChar
      * @throws java.io.IOException
      */
     public void write(Entity.SpecialChar spec) throws IOException {
@@ -89,7 +89,7 @@ public class StreamEncoder {
      * Write an named special char entity to the stream.
      * @param name The name of the special char.
      * @param spec The special char.
-     * @see Entity.SpecialChar
+     * @see se.uu.bmc.it.foa.Entity.SpecialChar
      * @throws java.io.IOException
      */
     public void write(String name, Entity.SpecialChar spec) throws IOException {

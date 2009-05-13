@@ -68,8 +68,8 @@ public class BufferEncoder {
 
     /**
      * Write an anonymous special char entity to the stream.
-     * @param type The special char.
-     * @see Entity.SpecialChar
+     * @param spec The special char.
+     * @see se.uu.bmc.it.foa.Entity.SpecialChar
      * @throws java.io.IOException
      */
     public String write(Entity.SpecialChar spec) throws IOException {
@@ -81,7 +81,7 @@ public class BufferEncoder {
      * Write an named special char entity to the stream.
      * @param name The name of the special char.
      * @param spec The special char.
-     * @see Entity.SpecialChar
+     * @see se.uu.bmc.it.foa.Entity.SpecialChar
      * @throws java.io.IOException
      */
     public String write(String name, Entity.SpecialChar spec) throws IOException {

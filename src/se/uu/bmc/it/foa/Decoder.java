@@ -142,12 +142,13 @@ public class Decoder {
     }
 
     /**
-     * Set the memory allocation strategy to be used when reading data from
+     * <p>Set the memory allocation strategy to be used when reading data from
      * the input stream. Note that setting a new strategy might trigger the
-     * input buffer to be allocated or resized.
+     * input buffer to be allocated or resized.</p>
      *
-     * If strategy is null, then this function will simply tell the garbage
-     * collector to dispose the current strategy.
+     * <p>If strategy is null, then this function will simply tell the garbage
+     * collector to dispose the current strategy.</p>
+     * 
      * @param strategy The memory allocation strategy.
      * @throws DecoderException if max size is smaller than current used size.
      */
@@ -219,16 +220,17 @@ public class Decoder {
     }
 
     /**
-     * Read next entity from the current selected input stream or buffer. If
+     * <p>Read next entity from the current selected input stream or buffer. If
      * the data source is an stream, then the internal buffer is grown as
-     * large as required.
+     * large as required.</p>
      *
-     * An DecoderException might be thrown if the maximum allowed buffer size is
+     * <p>An DecoderException might be thrown if the maximum allowed buffer size is
      * exceeded. If maximum buffer size is unlimited, then an OutOfMemoryError
-     * might be thrown.
+     * might be thrown.</p>
      *
-     * This function may block until at least one byte has been read if the
-     * data source is an stream.
+     * <p>This function may block until at least one byte has been read if the
+     * data source is an stream.</p>
+     *
      * @return The entity or null.
      * @throws IOException
      * @throws DecoderException if maximum buffer size is reached.
@@ -365,6 +367,7 @@ public class Decoder {
      * Resize the input buffer and copy up to size bytes from the old buffer
      * to the new one. The buffer data might be truncated if the new size is
      * smaller than the old one.
+     *
      * @param size The new buffer size.
      * @throws DecoderException if size is smaller than current used size.
      * @see getBufferSize

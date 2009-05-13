@@ -80,8 +80,8 @@ public class StreamDecoder {
      * the input stream.
      *
      * @param strategy The memory allocation strategy.
-     * @throws DecoderException if max size is smaller than current used size.
-     * @see Decoder.setStrategy() for details.
+     * @throws se.uu.bmc.it.foa.DecoderException if max size is smaller than current used size.
+     * @see se.uu.bmc.it.foa.Decoder#setStrategy(se.uu.bmc.it.foa.MemoryStrategy) for details.
      */
     public void setStrategy(MemoryStrategy strategy) throws DecoderException {
         decoder.setStrategy(strategy);
@@ -120,7 +120,7 @@ public class StreamDecoder {
      * @return The next entity or null on end of stream.
      * @throws IOException
      * @throws se.uu.bmc.it.foa.DecoderException
-     * @see Decoder.read() for details.
+     * @see se.uu.bmc.it.foa.Decoder#read() for details.
      */
     public Entity read() throws IOException, DecoderException {
         return decoder.read();
