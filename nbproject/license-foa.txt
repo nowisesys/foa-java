@@ -1,7 +1,7 @@
 <#if licenseFirst??>
 ${licenseFirst}
 </#if>
-${licensePrefix}Copyright (C) 2009 by Anders Lövgren and the Computing Department at BMC,
+${licensePrefix}Copyright (C) 2009-2012 by Anders Lövgren and the Computing Department at BMC,
 ${licensePrefix}Uppsala University.
 ${licensePrefix}
 ${licensePrefix}FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
