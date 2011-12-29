@@ -12,6 +12,7 @@
 
 package se.uu.bmc.it.foa;
 
+import java.io.OutputStream;
 import java.io.Writer;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -54,7 +55,7 @@ public class EncoderTest {
     @Test
     public void testSetStream() {
         System.out.println("setStream(OutputStream)");
-        Writer stream = null;
+        OutputStream stream = null;
         Encoder instance = new Encoder();
         instance.setStream(stream);
     }

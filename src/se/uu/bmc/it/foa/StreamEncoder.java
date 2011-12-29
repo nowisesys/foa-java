@@ -21,6 +21,7 @@ package se.uu.bmc.it.foa;
 
 import java.io.Writer;
 import java.io.IOException;
+import java.io.OutputStream;
 
 /**
  * This is a convenience class that wraps up the stream functionality of the
@@ -34,7 +35,7 @@ public class StreamEncoder {
      * Construct an StreamEncoder object for encoding to the stream.
      * @param stream The destination stream.
      */
-    public StreamEncoder(Writer stream) {
+    public StreamEncoder(OutputStream stream) {
         encoder = new Encoder(stream);
     }
 
@@ -43,7 +44,7 @@ public class StreamEncoder {
      * @param stream The output stream.
      * @see se.uu.bmc.it.foa.StreamEncoder#StreamEncoder(java.io.Writer)
      */
-    public void setStream(Writer stream) {
+    public void setStream(OutputStream stream) {
         encoder.setStream(stream);
     }
 
@@ -51,7 +52,7 @@ public class StreamEncoder {
      * Get the stream associated with this decoder object.
      * @return The write stream.
      */
-    public Writer getStream() {
+    public OutputStream getStream() {
         return encoder.getStream();
     }
 
