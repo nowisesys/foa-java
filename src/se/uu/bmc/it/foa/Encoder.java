@@ -20,6 +20,8 @@ package se.uu.bmc.it.foa;
 
 import java.io.Writer;
 import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 
 /**
  * This class implements the encoder part of the FOA specification.
@@ -32,6 +34,7 @@ public class Encoder {
      */
     public Encoder() {
         stream = null;
+        writer = null;
     }
 
     /**
@@ -39,8 +42,9 @@ public class Encoder {
      * string (entity) gets written to.
      * @param stream The output stream.
      */
-    public Encoder(Writer stream) {
+    public Encoder(OutputStream stream) {
         this.stream = stream;
+        this.writer = stream != null ? new OutputStreamWriter(stream) : null;
     }
 
     /**
@@ -48,15 +52,16 @@ public class Encoder {
      * @param stream The output stream.
      * @see se.uu.bmc.it.foa.Encoder#Encoder(java.io.Writer)
      */
-    public void setStream(Writer stream) {
+    public void setStream(OutputStream stream) {
         this.stream = stream;
+        this.writer = stream != null ? new OutputStreamWriter(stream) : null;
     }
 
     /**
      * Get the stream associated with this decoder object.
      * @return The write stream.
      */
-    public Writer getStream() {
+    public OutputStream getStream() {
         return stream;
     }
 
@@ -76,8 +81,8 @@ public class Encoder {
      */
     public void write(Entity.SpecialChar spec) throws IOException {
         buffer = spec.getValue() + "\n";
-        if (stream != null) {
-            stream.write(buffer);
+        if (writer != null) {
+            writer.write(buffer);
         }
     }
 
@@ -89,14 +94,14 @@ public class Encoder {
      * @throws java.io.IOException
      */
     public void write(String name, Entity.SpecialChar spec) throws IOException {
-        if (spec == Entity.SpecialChar.StartObject ||
-            spec == Entity.SpecialChar.StartArray) {
+        if (spec == Entity.SpecialChar.StartObject
+                || spec == Entity.SpecialChar.StartArray) {
             buffer = name + " = " + spec.getValue() + "\n";
         } else {
             buffer = spec.getValue() + "\n";
         }
-        if (stream != null) {
-            stream.write(buffer);
+        if (writer != null) {
+            writer.write(buffer);
         }
     }
 
@@ -107,8 +112,8 @@ public class Encoder {
      */
     public void write(String data) throws IOException {
         buffer = getEscaped(data) + "\n";
-        if (stream != null) {
-            stream.write(buffer);
+        if (writer != null) {
+            writer.write(buffer);
         }
     }
 
@@ -119,8 +124,8 @@ public class Encoder {
      */
     public void write(long data) throws IOException {
         buffer = data + "\n";
-        if (stream != null) {
-            stream.write(buffer);
+        if (writer != null) {
+            writer.write(buffer);
         }
     }
 
@@ -131,8 +136,8 @@ public class Encoder {
      */
     public void write(double data) throws IOException {
         buffer = data + "\n";
-        if (stream != null) {
-            stream.write(buffer);
+        if (writer != null) {
+            writer.write(buffer);
         }
     }
 
@@ -144,8 +149,8 @@ public class Encoder {
      */
     public void write(String name, long data) throws IOException {
         buffer = name + " = " + data + "\n";
-        if (stream != null) {
-            stream.write(buffer);
+        if (writer != null) {
+            writer.write(buffer);
         }
     }
 
@@ -157,8 +162,8 @@ public class Encoder {
      */
     public void write(String name, double data) throws IOException {
         buffer = name + " = " + data + "\n";
-        if (stream != null) {
-            stream.write(buffer);
+        if (writer != null) {
+            writer.write(buffer);
         }
     }
 
@@ -170,8 +175,8 @@ public class Encoder {
      */
     public void write(String name, String data) throws IOException {
         buffer = name + " = " + getEscaped(data) + "\n";
-        if (stream != null) {
-            stream.write(buffer);
+        if (writer != null) {
+            writer.write(buffer);
         }
     }
 
@@ -184,10 +189,10 @@ public class Encoder {
     private String getEscaped(String str) {
         if (escape) {
             String replace = "([])=";
-            if (str.indexOf(replace.charAt(0)) != -1 ||
-                    str.indexOf(replace.charAt(1)) != -1 ||
-                    str.indexOf(replace.charAt(2)) != -1 ||
-                    str.indexOf(replace.charAt(3)) != -1) {
+            if (str.indexOf(replace.charAt(0)) != -1
+                    || str.indexOf(replace.charAt(1)) != -1
+                    || str.indexOf(replace.charAt(2)) != -1
+                    || str.indexOf(replace.charAt(3)) != -1) {
                 StringBuilder res = new StringBuilder(str.length());
                 for (int i = 0; i < str.length(); ++i) {
                     int index = replace.indexOf(str.charAt(i));
@@ -239,7 +244,8 @@ public class Encoder {
 
         EnableEscape
     }
-    private Writer stream;
+    private OutputStream stream;
+    private Writer writer;
     private String buffer;
     private boolean escape = true;
 }
