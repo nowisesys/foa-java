@@ -9,7 +9,6 @@
  * GNU Classpath Exception. See the file COPYING and COPYING.CLASSPATH bundled
  * with the foa-java source or visit http://www.gnu.org
  */
-
 package se.uu.bmc.it.foa;
 
 import java.io.Reader;
@@ -53,6 +52,39 @@ public class DecoderTest {
      */
     @Test
     public void testSetBuffer() {
+        testSetCharBuffer();
+        testSetByteBuffer();
+        testSetStringBuffer();
+    }
+    
+    private void testSetCharBuffer() {
+        System.out.println("setBuffer(char[])");
+        Decoder instance = new Decoder();
+        // Test with no buffer:
+        char[] buffer = null;
+        instance.setBuffer(buffer);
+        assertEquals(null, instance.getBuffer());
+        // Test with buffer:
+        buffer = new char[3];
+        buffer[0] = 'F';
+        buffer[1] = 'O';
+        buffer[2] = 'A';
+        instance.setBuffer(buffer);
+        // Should be the same object:
+        assertEquals(buffer, instance.getBuffer());
+        boolean match = true;
+        char[] result = instance.getBuffer();
+        for (int i = 0; i < buffer.length; ++i) {
+            if (result[i] != buffer[i]) {
+                match = false;
+                break;
+            }
+        }
+        // Should have identical content:
+        assertEquals(true, match);
+    }
+    
+    private void testSetByteBuffer() {
         System.out.println("setBuffer(byte[])");
         Decoder instance = new Decoder();
         // Test with no buffer:
@@ -61,29 +93,31 @@ public class DecoderTest {
         assertEquals(null, instance.getBuffer());
         // Test with buffer:
         buffer = new byte[3];
-        buffer[0] = 32;
-        buffer[1] = 45;
-        buffer[2] = 67;
+        buffer[0] = 70;
+        buffer[1] = 79;
+        buffer[2] = 65;
         instance.setBuffer(buffer);
-        // Should be the same object:
-        assertEquals(buffer, instance.getBuffer());
         boolean match = true;
-        byte[] result = instance.getBuffer();
-        for(int i = 0; i < buffer.length; ++i) {
-            if(result[i] != buffer[i]) {
+        char[] result = instance.getBuffer();
+        for (int i = 0; i < buffer.length; ++i) {
+            if (result[i] != buffer[i]) {
                 match = false;
                 break;
             }
         }
         // Should have identical content:
         assertEquals(true, match);
+    }
+    
+    private void testSetStringBuffer() {
         System.out.println("setBuffer(String)");
+        Decoder instance = new Decoder();
         String str = "Test string";
-        buffer = str.getBytes();
+        char []buffer = str.toCharArray();
         instance.setBuffer(buffer);
         assertEquals(buffer, instance.getBuffer());
         String ref = new String(instance.getBuffer());
-        match = str.compareTo(ref) == 0;
+        boolean match = str.compareTo(ref) == 0;
         assertEquals(true, match);
     }
 
@@ -270,5 +304,4 @@ public class DecoderTest {
         Entity result = instance.read();
         assertEquals(expResult, result);
     }
-
 }

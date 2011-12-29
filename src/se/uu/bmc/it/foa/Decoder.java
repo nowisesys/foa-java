@@ -47,8 +47,17 @@ public class Decoder {
     /**
      * Creates an decoder object for decoding an external buffer.
      * @param buffer The external buffer.
+     * @deprecated This method is provided for backward compatibility. Use constructor Decoder(String) or Decoder(char []) instead.
      */
     public Decoder(byte[] buffer) {
+        this(new String(buffer));
+    }
+
+    /**
+     * Creates an decoder object for decoding an external buffer.
+     * @param buffer The external buffer.
+     */
+    public Decoder(char[] buffer) {
         this.stream = null;
         this.strategy = null;
         reset(buffer, true);
@@ -56,10 +65,10 @@ public class Decoder {
 
     /**
      * Creates an decoder object for decoding an string. This is an convenient
-     * constructor for Decoder(byte[]).
+     * constructor for Decoder(char[]).
      */
     public Decoder(String str) {
-        this(str.getBytes());
+        this(str.toCharArray());
     }
 
     /**
@@ -70,7 +79,7 @@ public class Decoder {
     public Decoder(Reader stream) {
         this.strategy = new MemoryStrategy();
         this.stream = stream;
-        reset(new byte[strategy.getInitSize()], false);
+        reset(new char[strategy.getInitSize()], false);
     }
 
     /**
@@ -81,15 +90,28 @@ public class Decoder {
     public Decoder(Reader stream, MemoryStrategy strategy) {
         this.strategy = strategy;
         this.stream = stream;
-        reset(new byte[strategy.getInitSize()], false);
+        reset(new char[strategy.getInitSize()], false);
     }
 
     /**
      * Set an extern buffer to read entities from.
      * @param buffer The input buffer.
      */
-    public void setBuffer(byte[] buffer) {
+    public void setBuffer(char[] buffer) {
         reset(buffer, true);
+    }
+
+    /**
+     * Set an extern buffer to read entities from.
+     * @param buffer The input buffer.
+     * @deprecated This method is provided for backward compatibility. Use setBuffer(String) or setBuffer(char []) instead.
+     */
+    public void setBuffer(byte[] buffer) {
+        if (buffer != null) {
+            reset((new String(buffer)).toCharArray(), true);
+        } else {
+            reset(null, true);
+        }
     }
 
     /**
@@ -98,13 +120,13 @@ public class Decoder {
      * @param str The string to decode.
      */
     public void setBuffer(String str) {
-        reset(str.getBytes(), true);
+        reset(str.toCharArray(), true);
     }
 
     /**
      * @return The current used buffer.
      */
-    public byte[] getBuffer() {
+    public char[] getBuffer() {
         return buffer;
     }
 
@@ -154,15 +176,15 @@ public class Decoder {
      */
     public void setStrategy(MemoryStrategy strategy) throws DecoderException {
         if (strategy != null) {
-            if (strategy.getMaxSize() < ppos &&
-                    strategy.getMaxSize() != MemoryStrategy.UNLIMITED) {
+            if (strategy.getMaxSize() < ppos
+                    && strategy.getMaxSize() != MemoryStrategy.UNLIMITED) {
                 throw new DecoderException("Setting the memory allocation strategy would truncate data in the input buffer.");
             }
             if (buffer == null) {
-                buffer = new byte[strategy.getInitSize()];
+                buffer = new char[strategy.getInitSize()];
             }
-            if (strategy.getMaxSize() < this.buffer.length &&
-                    strategy.getMaxSize() != MemoryStrategy.UNLIMITED) {
+            if (strategy.getMaxSize() < this.buffer.length
+                    && strategy.getMaxSize() != MemoryStrategy.UNLIMITED) {
                 resize(strategy.getMaxSize());
             }
         }
@@ -253,7 +275,7 @@ public class Decoder {
             }
         } else {
             if (buffer == null) {
-                buffer = new byte[strategy.getInitSize()];
+                buffer = new char[strategy.getInitSize()];
             }
             if (stream == null) {
                 return null;
@@ -267,13 +289,13 @@ public class Decoder {
                     ++line;
                     return decode(0, ppos);
                 }
-                buffer[ppos++] = (byte) c;
+                buffer[ppos++] = (char) c;
 
                 if (ppos == buffer.length) {
                     // Attempt to grow the input buffer:
                     int size = buffer.length + strategy.getStepSize();
-                    if (strategy.getMaxSize() >= size &&
-                            strategy.getMaxSize() != MemoryStrategy.UNLIMITED) {
+                    if (strategy.getMaxSize() >= size
+                            && strategy.getMaxSize() != MemoryStrategy.UNLIMITED) {
                         throw new DecoderException("Maximum buffer size exceeded.");
                     }
                     resize(size);
@@ -357,7 +379,7 @@ public class Decoder {
      * @param buffer The input buffer.
      * @param extern True if buffer is extern.
      */
-    private void reset(byte[] buffer, boolean extern) {
+    private void reset(char[] buffer, boolean extern) {
         this.buffer = buffer;
         this.extern = extern;
         this.line = this.ppos = 0;
@@ -377,7 +399,7 @@ public class Decoder {
         if (size < ppos) {
             throw new DecoderException("Resize input buffer would truncate data.");
         }
-        byte[] buff = new byte[size];
+        char[] buff = new char[size];
         for (int i = 0; i < ppos; ++i) {
             buff[i] = this.buffer[i];
         }
@@ -386,7 +408,7 @@ public class Decoder {
     private Reader stream;
     private MemoryStrategy strategy;
     private EntityMap map = new EntityMap();
-    private byte[] buffer;  // The data buffer.
+    private char[] buffer;  // The data buffer.
     private int ppos;       // Put data position (when reading stream)
     private int line;       // The current line.
     private boolean extern; // True if buffer is external.

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2009 by Anders Lövgren and the Computing Department at BMC,
+ * Copyright (C) 2009-2012 by Anders Lövgren and the Computing Department at BMC,
  * Uppsala University.
  * 
  * FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
@@ -32,11 +32,20 @@ public class BufferDecoder {
     /**
      * Creates an decoder object for decoding the buffer.
      * @param buffer The external buffer.
+     * @deprecated This method is provided for backward compatibility. Use constructor BufferDecoder(String) or BufferDecoder(char []) instead.
      */
     public BufferDecoder(byte[] buffer) {
         decoder = new Decoder(buffer);
     }
 
+    /**
+     * Creates an decoder object for decoding the buffer.
+     * @param buffer The external buffer.
+     */
+    public BufferDecoder(char[] buffer) {
+        decoder = new Decoder(buffer);
+    }
+    
     /**
      * Creates an decoder object for decoding the string.
      * @param str The string to decode.
@@ -46,13 +55,22 @@ public class BufferDecoder {
     }
 
     /**
-     * Set an byte array buffer to read entities from.
+     * Set the char array buffer to read entities from.
      * @param buffer The input buffer.
+     */
+    public void setBuffer(char[] buffer) {
+        decoder.setBuffer(buffer);
+    }
+
+    /**
+     * Set the byte array buffer to read entities from.
+     * @param buffer The input buffer.
+     * @deprecated This method is provided for backward compatibility. Use setBuffer(String) or setBuffer(char []) instead.
      */
     public void setBuffer(byte[] buffer) {
         decoder.setBuffer(buffer);
     }
-
+    
     /**
      * Set the string to read entities from. This is a convenience method for
      * setBuffer(byte[]).
@@ -65,7 +83,7 @@ public class BufferDecoder {
     /**
      * @return The current used buffer.
      */
-    public byte[] getBuffer() {
+    public char[] getBuffer() {
         return decoder.getBuffer();
     }
 

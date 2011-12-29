@@ -28,7 +28,7 @@ import se.uu.bmc.it.foa.Decoder.Option;
 public class BufferDecoderTest {
 
     private String string = "Hello world!\n";
-    private byte[] buffer;
+    private char[] buffer;
     private BufferDecoder decoder;
 
     public BufferDecoderTest() {
@@ -44,7 +44,7 @@ public class BufferDecoderTest {
 
     @Before
     public void setUp() {
-        buffer = string.getBytes();
+        buffer = string.toCharArray();
         decoder = new BufferDecoder(buffer);
     }
 
