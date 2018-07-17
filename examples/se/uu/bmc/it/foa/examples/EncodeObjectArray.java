@@ -21,7 +21,6 @@
 package se.uu.bmc.it.foa.examples;
 
 import se.uu.bmc.it.foa.*;
-import java.io.OutputStreamWriter;
 import java.io.IOException;
 
 public class EncodeObjectArray {
