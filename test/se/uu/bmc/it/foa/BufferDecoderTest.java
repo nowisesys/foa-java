@@ -85,6 +85,7 @@ public class BufferDecoderTest {
 
     /**
      * Test of setOption method, of class BufferDecoder.
+     * @throws java.lang.Exception
      */
     @Test
     public void testSetOption() throws Exception {
@@ -98,6 +99,7 @@ public class BufferDecoderTest {
 
     /**
      * Test of getOption method, of class BufferDecoder.
+     * @throws java.lang.Exception
      */
     @Test
     public void testGetOption() throws Exception {
@@ -108,6 +110,7 @@ public class BufferDecoderTest {
 
     /**
      * Test of read method, of class BufferDecoder.
+     * @throws java.lang.Exception
      */
     @Test
     public void testRead() throws Exception {

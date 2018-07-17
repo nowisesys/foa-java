@@ -90,6 +90,7 @@ public class Entity {
      * Get the character mapped by the type argument.
      *
      * @param type The entity type.
+     * @return char
      */
     public static char getTypeChar(Type type) {
         if (type == Type.StartObject) {

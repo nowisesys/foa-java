@@ -150,6 +150,7 @@ public class DecoderTest {
 
     /**
      * Test of setStrategy method, of class Decoder.
+     * @throws java.lang.Exception
      */
     @Test
     public void testSetStrategy() throws Exception {
@@ -178,6 +179,7 @@ public class DecoderTest {
 
     /**
      * Test of setOption method, of class Decoder.
+     * @throws java.lang.Exception
      */
     @Test
     public void testSetOption() throws Exception {
@@ -246,6 +248,7 @@ public class DecoderTest {
 
     /**
      * Test of getOption method, of class Decoder.
+     * @throws java.lang.Exception
      */
     @Test
     public void testGetOption() throws Exception {
@@ -295,6 +298,7 @@ public class DecoderTest {
 
     /**
      * Test of read method, of class Decoder.
+     * @throws java.lang.Exception
      */
     @Test
     public void testRead() throws Exception {

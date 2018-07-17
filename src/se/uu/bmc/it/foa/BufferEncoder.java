@@ -70,6 +70,7 @@ public class BufferEncoder {
      * Write an anonymous special char entity to the stream.
      *
      * @param spec The special char.
+     * @return String
      * @see se.uu.bmc.it.foa.Entity.SpecialChar
      * @throws java.io.IOException
      */
@@ -83,6 +84,7 @@ public class BufferEncoder {
      *
      * @param name The name of the special char.
      * @param spec The special char.
+     * @return String
      * @see se.uu.bmc.it.foa.Entity.SpecialChar
      * @throws java.io.IOException
      */
@@ -95,6 +97,7 @@ public class BufferEncoder {
      * Write anonymous data entity to the stream.
      *
      * @param data The data.
+     * @return String
      * @throws java.io.IOException
      */
     public String write(String data) throws IOException {
@@ -106,6 +109,7 @@ public class BufferEncoder {
      * Specialization for writing anonymous integer values.
      *
      * @param data The integer value.
+     * @return String
      * @throws java.io.IOException
      */
     public String write(long data) throws IOException {
@@ -116,7 +120,8 @@ public class BufferEncoder {
     /**
      * Specialization for writing anonymous float point value.
      *
-     * @param data The float point number (double)
+     * @param data The float point number (double).
+     * @return String
      * @throws java.io.IOException
      */
     public String write(double data) throws IOException {
@@ -129,6 +134,7 @@ public class BufferEncoder {
      *
      * @param name The data name.
      * @param data The integer value.
+     * @return String
      * @throws java.io.IOException
      */
     public String write(String name, long data) throws IOException {
@@ -140,7 +146,8 @@ public class BufferEncoder {
      * Specialization for writing named float point value.
      *
      * @param name The data name.
-     * @param data The float point number (double)
+     * @param data The float point number (double).
+     * @return String
      * @throws java.io.IOException
      */
     public String write(String name, double data) throws IOException {
@@ -153,6 +160,7 @@ public class BufferEncoder {
      *
      * @param name The data name.
      * @param data The data.
+     * @return String
      * @throws java.io.IOException
      */
     public String write(String name, String data) throws IOException {

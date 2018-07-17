@@ -48,6 +48,7 @@ public class BufferEncoderTest {
 
     /**
      * Test of getBuffer method, of class BufferEncoder.
+     * @throws java.lang.Exception
      */
     @Test
     public void testGetBuffer() throws Exception {
@@ -60,6 +61,7 @@ public class BufferEncoderTest {
 
     /**
      * Test of setOption method, of class BufferEncoder.
+     * @throws java.lang.Exception
      */
     @Test
     public void testSetOption() throws Exception {
@@ -74,6 +76,7 @@ public class BufferEncoderTest {
 
     /**
      * Test of getOption method, of class BufferEncoder.
+     * @throws java.lang.Exception
      */
     @Test
     public void testGetOption() throws Exception {
@@ -85,6 +88,7 @@ public class BufferEncoderTest {
 
     /**
      * Test of write method, of class BufferEncoder.
+     * @throws java.lang.Exception
      */
     @Test
     public void testWrite_EntitySpecialChar() throws Exception {
@@ -98,6 +102,7 @@ public class BufferEncoderTest {
 
     /**
      * Test of write method, of class BufferEncoder.
+     * @throws java.lang.Exception
      */
     @Test
     public void testWrite_String_EntitySpecialChar() throws Exception {
@@ -111,6 +116,7 @@ public class BufferEncoderTest {
 
     /**
      * Test of write method, of class BufferEncoder.
+     * @throws java.lang.Exception
      */
     @Test
     public void testWrite_String() throws Exception {
@@ -121,6 +127,7 @@ public class BufferEncoderTest {
 
     /**
      * Test of write method, of class BufferEncoder.
+     * @throws java.lang.Exception
      */
     @Test
     public void testWrite_long() throws Exception {
@@ -132,6 +139,7 @@ public class BufferEncoderTest {
 
     /**
      * Test of write method, of class BufferEncoder.
+     * @throws java.lang.Exception
      */
     @Test
     public void testWrite_double() throws Exception {
@@ -143,6 +151,7 @@ public class BufferEncoderTest {
 
     /**
      * Test of write method, of class BufferEncoder.
+     * @throws java.lang.Exception
      */
     @Test
     public void testWrite_String_long() throws Exception {
@@ -154,6 +163,7 @@ public class BufferEncoderTest {
 
     /**
      * Test of write method, of class BufferEncoder.
+     * @throws java.lang.Exception
      */
     @Test
     public void testWrite_String_double() throws Exception {
@@ -165,6 +175,7 @@ public class BufferEncoderTest {
 
     /**
      * Test of write method, of class BufferEncoder.
+     * @throws java.lang.Exception
      */
     @Test
     public void testWrite_String_String() throws Exception {

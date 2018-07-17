@@ -45,6 +45,7 @@ public class Decoder {
     }
 
     /**
+     *
      * Creates an decoder object for decoding an external buffer.
      *
      * @param buffer The external buffer.
@@ -69,6 +70,8 @@ public class Decoder {
     /**
      * Creates an decoder object for decoding an string. This is an convenient constructor for
      * Decoder(char[]).
+     *
+     * @param str The string to decode.
      */
     public Decoder(String str) {
         this(str.toCharArray());
