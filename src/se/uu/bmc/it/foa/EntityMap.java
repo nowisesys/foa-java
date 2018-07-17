@@ -31,8 +31,8 @@ public class EntityMap {
      * Construct the lookup table for use by both an Encoder and Decoder.
      */
     public EntityMap() {
-        encodeMap = new HashMap<Character, String>();
-        decodeMap = new HashMap<String, Character>();
+        encodeMap = new HashMap<>();
+        decodeMap = new HashMap<>();
         String str = "([])=";
         for (int i = 0; i < str.length(); ++i) {
             Character key = str.charAt(i);
