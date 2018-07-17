@@ -43,7 +43,7 @@ public class StreamEncoder {
      * Sets an new output stream for encoded entities.
      *
      * @param stream The output stream.
-     * @see se.uu.bmc.it.foa.StreamEncoder#StreamEncoder(java.io.Writer)
+     * @see se.uu.bmc.it.foa.StreamEncoder#StreamEncoder(OutputStream)
      */
     public void setStream(OutputStream stream) {
         encoder.setStream(new OutputStreamWriter(stream));

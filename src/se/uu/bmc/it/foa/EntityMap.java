@@ -21,7 +21,7 @@ import java.util.HashMap;
 
 /**
  * Utility class for mapping special chars (entity types) to their encoded and decoded string
- * representation. This class acts as an lookup table for special chars <-> encoded representaion.
+ * representation. This class acts as an lookup table for special chars &lt;-&gt; encoded representaion.
  *
  * @author Anders Lövgren (QNET/BMC CompDept)
  */
