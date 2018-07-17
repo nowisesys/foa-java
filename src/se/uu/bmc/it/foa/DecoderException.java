@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2009 by Anders Lövgren and the Computing Department at BMC,
+ * Copyright (C) 2009-2018 by Anders Lövgren and the Computing Department at BMC,
  * Uppsala University.
  *
  * FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
@@ -9,18 +9,17 @@
  * GNU Classpath Exception. See the file COPYING and COPYING.CLASSPATH bundled
  * with the foa-java source or visit http://www.gnu.org
  */
-
-/*
+/**
  * DecoderException.java
  *
  * Created: Mar 30, 2009, 1:51:15 PM
  * Author:  Anders Lövgren (QNET/BMC CompDept)
  */
-
 package se.uu.bmc.it.foa;
 
 /**
  * The exception thrown by various methods in class Decoder.
+ *
  * @author Anders Lövgren (QNET/BMC CompDept)
  */
 public class DecoderException extends Exception {
@@ -31,9 +30,9 @@ public class DecoderException extends Exception {
     public DecoderException() {
     }
 
-
     /**
      * Constructs an instance of <code>DecoderException</code> with the specified detail message.
+     *
      * @param msg the detail message.
      */
     public DecoderException(String msg) {

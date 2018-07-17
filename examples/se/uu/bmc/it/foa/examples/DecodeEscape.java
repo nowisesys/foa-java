@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2009 by Anders Lövgren and the Computing Departmentity at BMC,
+ * Copyright (C) 2009-2018 by Anders Lövgren and the Computing Departmentity at BMC,
  * Uppsala University.
  * 
  * FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
@@ -9,8 +9,7 @@
  * GNU Classpath Exception. See the file COPYING and COPYING.CLASSPATH bundled
  * with the foa-java source or visit http://www.gnu.org
  */
-
-/*
+/**
  * DecodeEscape.java
  *
  * Created: Apr 1, 2009, 3:07:19 PM
@@ -61,7 +60,7 @@ public class DecodeEscape {
             System.out.println("  name: '" + entity.getName() + "'");
             System.out.println("  data: '" + entity.getData() + "'");
         }
-        
+
         decoder.setOption(Decoder.Option.EnableEscape, false);
         System.out.println("\n** escape " + decoder.getOption(Decoder.Option.EnableEscape) + ":");
         decoder.setBuffer("name=a%28b%5Bc%5Dd%29e%3D\n");

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2009 by Anders Lövgren and the Computing Department at BMC,
+ * Copyright (C) 2009-2018 by Anders Lövgren and the Computing Department at BMC,
  * Uppsala University.
  *
  * FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
@@ -9,8 +9,7 @@
  * GNU Classpath Exception. See the file COPYING and COPYING.CLASSPATH bundled
  * with the foa-java source or visit http://www.gnu.org
  */
-
-/*
+/**
  * Decoder.java
  *
  * Created: Mar 30, 2009, 1:50:40 PM
@@ -23,6 +22,7 @@ import java.io.IOException;
 
 /**
  * This class implements the decoder part of the FOA specification.
+ *
  * @author Anders Lövgren (QNET/BMC CompDept)
  */
 public class Decoder {
@@ -46,8 +46,10 @@ public class Decoder {
 
     /**
      * Creates an decoder object for decoding an external buffer.
+     *
      * @param buffer The external buffer.
-     * @deprecated This method is provided for backward compatibility. Use constructor Decoder(String) or Decoder(char []) instead.
+     * @deprecated This method is provided for backward compatibility. Use constructor
+     * Decoder(String) or Decoder(char []) instead.
      */
     public Decoder(byte[] buffer) {
         this(new String(buffer));
@@ -55,6 +57,7 @@ public class Decoder {
 
     /**
      * Creates an decoder object for decoding an external buffer.
+     *
      * @param buffer The external buffer.
      */
     public Decoder(char[] buffer) {
@@ -64,16 +67,17 @@ public class Decoder {
     }
 
     /**
-     * Creates an decoder object for decoding an string. This is an convenient
-     * constructor for Decoder(char[]).
+     * Creates an decoder object for decoding an string. This is an convenient constructor for
+     * Decoder(char[]).
      */
     public Decoder(String str) {
         this(str.toCharArray());
     }
 
     /**
-     * Creates an decoder for decoding entities from the input stream using
-     * an default memory allocation strategy.
+     * Creates an decoder for decoding entities from the input stream using an default memory
+     * allocation strategy.
+     *
      * @param stream The input stream.
      */
     public Decoder(Reader stream) {
@@ -84,6 +88,7 @@ public class Decoder {
 
     /**
      * Creates an decoder for decoding entities from the input stream.
+     *
      * @param stream The input stream to decode.
      * @param strategy An memory allocation strategy to use.
      */
@@ -95,6 +100,7 @@ public class Decoder {
 
     /**
      * Set an extern buffer to read entities from.
+     *
      * @param buffer The input buffer.
      */
     public void setBuffer(char[] buffer) {
@@ -103,8 +109,10 @@ public class Decoder {
 
     /**
      * Set an extern buffer to read entities from.
+     *
      * @param buffer The input buffer.
-     * @deprecated This method is provided for backward compatibility. Use setBuffer(String) or setBuffer(char []) instead.
+     * @deprecated This method is provided for backward compatibility. Use setBuffer(String) or
+     * setBuffer(char []) instead.
      */
     public void setBuffer(byte[] buffer) {
         if (buffer != null) {
@@ -115,8 +123,8 @@ public class Decoder {
     }
 
     /**
-     * Set an string to read entities from. This is a convenient method for
-     * setBuffer(byte[]).
+     * Set an string to read entities from. This is a convenient method for setBuffer(byte[]).
+     *
      * @param str The string to decode.
      */
     public void setBuffer(String str) {
@@ -131,8 +139,9 @@ public class Decoder {
     }
 
     /**
-     * Set the stream to read entity data from. This function will create a
-     * default memory allocation strategy if none exists yet.
+     * Set the stream to read entity data from. This function will create a default memory
+     * allocation strategy if none exists yet.
+     *
      * @param stream The input stream.
      */
     public void setStream(Reader stream) {
@@ -144,8 +153,8 @@ public class Decoder {
     }
 
     /**
-     * Set the stream to read entity data from using the strategy as memory
-     * allocation strategy.
+     * Set the stream to read entity data from using the strategy as memory allocation strategy.
+     *
      * @param stream The input stream.
      * @param strategy The memory allocation strategy.
      */
@@ -157,6 +166,7 @@ public class Decoder {
 
     /**
      * Get the current used input stream.
+     *
      * @return The input stream.
      */
     public Reader getStream() {
@@ -164,13 +174,14 @@ public class Decoder {
     }
 
     /**
-     * <p>Set the memory allocation strategy to be used when reading data from
-     * the input stream. Note that setting a new strategy might trigger the
-     * input buffer to be allocated or resized.</p>
+     * <p>
+     * Set the memory allocation strategy to be used when reading data from the input stream. Note
+     * that setting a new strategy might trigger the input buffer to be allocated or resized.</p>
      *
-     * <p>If strategy is null, then this function will simply tell the garbage
-     * collector to dispose the current strategy.</p>
-     * 
+     * <p>
+     * If strategy is null, then this function will simply tell the garbage collector to dispose the
+     * current strategy.</p>
+     *
      * @param strategy The memory allocation strategy.
      * @throws DecoderException if max size is smaller than current used size.
      */
@@ -193,6 +204,7 @@ public class Decoder {
 
     /**
      * Get the currently used memory allocation strategy.
+     *
      * @return The current memory allocation strategy.
      */
     public MemoryStrategy getStrategy() {
@@ -201,6 +213,7 @@ public class Decoder {
 
     /**
      * Sets the option to true or false.
+     *
      * @param option The option to set.
      * @param val The option value.
      * @throws se.uu.bmc.it.foa.DecoderException
@@ -215,6 +228,7 @@ public class Decoder {
 
     /**
      * Gets the option value.
+     *
      * @param option The option to get true or false of.
      * @return The option value.
      * @throws se.uu.bmc.it.foa.DecoderException
@@ -242,16 +256,17 @@ public class Decoder {
     }
 
     /**
-     * <p>Read next entity from the current selected input stream or buffer. If
-     * the data source is an stream, then the internal buffer is grown as
-     * large as required.</p>
+     * <p>
+     * Read next entity from the current selected input stream or buffer. If the data source is an
+     * stream, then the internal buffer is grown as large as required.</p>
      *
-     * <p>An DecoderException might be thrown if the maximum allowed buffer size is
-     * exceeded. If maximum buffer size is unlimited, then an OutOfMemoryError
-     * might be thrown.</p>
+     * <p>
+     * An DecoderException might be thrown if the maximum allowed buffer size is exceeded. If
+     * maximum buffer size is unlimited, then an OutOfMemoryError might be thrown.</p>
      *
-     * <p>This function may block until at least one byte has been read if the
-     * data source is an stream.</p>
+     * <p>
+     * This function may block until at least one byte has been read if the data source is an
+     * stream.</p>
      *
      * @return The entity or null.
      * @throws IOException
@@ -307,6 +322,7 @@ public class Decoder {
 
     /**
      * Decode the entity in buffer between start and end.
+     *
      * @param start The start position.
      * @param end The end position.
      * @return The decoded entity.
@@ -348,8 +364,9 @@ public class Decoder {
     }
 
     /**
-     * Escape all HTTP code escaped special chars. This function is an noop
-     * unless the escape option is enabled.
+     * Escape all HTTP code escaped special chars. This function is an noop unless the escape option
+     * is enabled.
+     *
      * @param str The escaped string.
      * @return An unescaped string.
      */
@@ -376,6 +393,7 @@ public class Decoder {
 
     /**
      * A helper function for managing the input buffer and internal counters.
+     *
      * @param buffer The input buffer.
      * @param extern True if buffer is extern.
      */
@@ -386,9 +404,8 @@ public class Decoder {
     }
 
     /**
-     * Resize the input buffer and copy up to size bytes from the old buffer
-     * to the new one. The buffer data might be truncated if the new size is
-     * smaller than the old one.
+     * Resize the input buffer and copy up to size bytes from the old buffer to the new one. The
+     * buffer data might be truncated if the new size is smaller than the old one.
      *
      * @param size The new buffer size.
      * @throws DecoderException if size is smaller than current used size.

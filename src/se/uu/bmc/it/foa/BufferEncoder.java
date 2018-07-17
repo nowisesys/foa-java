@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2009 by Anders Lövgren and the Computing Department at BMC,
+ * Copyright (C) 2009-2018 by Anders Lövgren and the Computing Department at BMC,
  * Uppsala University.
  * 
  * FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
@@ -9,23 +9,20 @@
  * GNU Classpath Exception. See the file COPYING and COPYING.CLASSPATH bundled
  * with the foa-java source or visit http://www.gnu.org
  */
-
-/*
+/**
  * BufferEncoder.java
  *
  * Created: Apr 1, 2009, 2:53:26 AM
  * Author:  Anders Lövgren (QNET/BMC CompDept)
  */
-
 package se.uu.bmc.it.foa;
 
 import java.io.IOException;
 
 /**
- * This is a convenience class that wraps up the string buffer functionality of
- * the more generic Decoder class. It also redefines how the write() member
- * function behaves by always returning the string buffer containing the last
- * encoded FOA entity.
+ * This is a convenience class that wraps up the string buffer functionality of the more generic
+ * Decoder class. It also redefines how the write() member function behaves by always returning the
+ * string buffer containing the last encoded FOA entity.
  *
  * @author Anders Lövgren (QNET/BMC CompDept)
  */
@@ -40,6 +37,7 @@ public class BufferEncoder {
 
     /**
      * Return the string representation of the last encoded entity.
+     *
      * @return The encoded entity.
      */
     public String getBuffer() {
@@ -48,6 +46,7 @@ public class BufferEncoder {
 
     /**
      * Sets the option to true or false.
+     *
      * @param option The option to set.
      * @param val The option value.
      * @throws se.uu.bmc.it.foa.EncoderException
@@ -58,6 +57,7 @@ public class BufferEncoder {
 
     /**
      * Gets the option value.
+     *
      * @param option The option to get true or false of.
      * @return The option value.
      * @throws se.uu.bmc.it.foa.EncoderException
@@ -68,6 +68,7 @@ public class BufferEncoder {
 
     /**
      * Write an anonymous special char entity to the stream.
+     *
      * @param spec The special char.
      * @see se.uu.bmc.it.foa.Entity.SpecialChar
      * @throws java.io.IOException
@@ -79,6 +80,7 @@ public class BufferEncoder {
 
     /**
      * Write an named special char entity to the stream.
+     *
      * @param name The name of the special char.
      * @param spec The special char.
      * @see se.uu.bmc.it.foa.Entity.SpecialChar
@@ -91,6 +93,7 @@ public class BufferEncoder {
 
     /**
      * Write anonymous data entity to the stream.
+     *
      * @param data The data.
      * @throws java.io.IOException
      */
@@ -101,6 +104,7 @@ public class BufferEncoder {
 
     /**
      * Specialization for writing anonymous integer values.
+     *
      * @param data The integer value.
      * @throws java.io.IOException
      */
@@ -111,6 +115,7 @@ public class BufferEncoder {
 
     /**
      * Specialization for writing anonymous float point value.
+     *
      * @param data The float point number (double)
      * @throws java.io.IOException
      */
@@ -121,6 +126,7 @@ public class BufferEncoder {
 
     /**
      * Specialization for writing named integer value.
+     *
      * @param name The data name.
      * @param data The integer value.
      * @throws java.io.IOException
@@ -132,6 +138,7 @@ public class BufferEncoder {
 
     /**
      * Specialization for writing named float point value.
+     *
      * @param name The data name.
      * @param data The float point number (double)
      * @throws java.io.IOException
@@ -143,6 +150,7 @@ public class BufferEncoder {
 
     /**
      * Write named data entity to the stream.
+     *
      * @param name The data name.
      * @param data The data.
      * @throws java.io.IOException

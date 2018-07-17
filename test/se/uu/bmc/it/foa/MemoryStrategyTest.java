@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2009 by Anders Lövgren and the Computing Department at BMC,
+ * Copyright (C) 2009-2018 by Anders Lövgren and the Computing Department at BMC,
  * Uppsala University.
  * 
  * FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
@@ -20,7 +20,7 @@ import static org.junit.Assert.*;
 
 /**
  * Unit test for class MemoryStrategy.
- * 
+ *
  * @author Anders Lövgren (QNET/BMC CompDept)
  */
 public class MemoryStrategyTest {

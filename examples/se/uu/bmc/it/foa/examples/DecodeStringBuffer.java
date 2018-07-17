@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2009 by Anders Lövgren and the Computing Department at BMC,
+ * Copyright (C) 2009-2018 by Anders Lövgren and the Computing Department at BMC,
  * Uppsala University.
  * 
  * FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
@@ -9,8 +9,7 @@
  * GNU Classpath Exception. See the file COPYING and COPYING.CLASSPATH bundled
  * with the foa-java source or visit http://www.gnu.org
  */
-
-/*
+/**
  * DecodeStringBuffer.java
  *
  * Created: Apr 1, 2009, 12:39:36 AM
@@ -19,7 +18,6 @@
  * Description:
  * Demonstrate decoding an string buffer.
  */
-
 package se.uu.bmc.it.foa.examples;
 
 import se.uu.bmc.it.foa.*;

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2009 by Anders Lövgren and the Computing Department at BMC,
+ * Copyright (C) 2009-2018 by Anders Lövgren and the Computing Department at BMC,
  * Uppsala University.
  * 
  * FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
@@ -23,7 +23,7 @@ import se.uu.bmc.it.foa.Decoder.Option;
 
 /**
  * Unit test for class Decoder.
- * 
+ *
  * @author Anders Lövgren (QNET/BMC CompDept)
  */
 public class DecoderTest {
@@ -56,7 +56,7 @@ public class DecoderTest {
         testSetByteBuffer();
         testSetStringBuffer();
     }
-    
+
     private void testSetCharBuffer() {
         System.out.println("setBuffer(char[])");
         Decoder instance = new Decoder();
@@ -83,7 +83,7 @@ public class DecoderTest {
         // Should have identical content:
         assertEquals(true, match);
     }
-    
+
     private void testSetByteBuffer() {
         System.out.println("setBuffer(byte[])");
         Decoder instance = new Decoder();
@@ -108,12 +108,12 @@ public class DecoderTest {
         // Should have identical content:
         assertEquals(true, match);
     }
-    
+
     private void testSetStringBuffer() {
         System.out.println("setBuffer(String)");
         Decoder instance = new Decoder();
         String str = "Test string";
-        char []buffer = str.toCharArray();
+        char[] buffer = str.toCharArray();
         instance.setBuffer(buffer);
         assertEquals(buffer, instance.getBuffer());
         String ref = new String(instance.getBuffer());

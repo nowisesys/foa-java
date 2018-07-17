@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2009 by Anders Lövgren and the Computing Department at BMC,
+ * Copyright (C) 2009-2018 by Anders Lövgren and the Computing Department at BMC,
  * Uppsala University.
  * 
  * FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
@@ -9,8 +9,7 @@
  * GNU Classpath Exception. See the file COPYING and COPYING.CLASSPATH bundled
  * with the foa-java source or visit http://www.gnu.org
  */
-
-/*
+/**
  * EntityMap.java
  *
  * Created: Apr 1, 2009, 7:15:06 PM
@@ -21,9 +20,8 @@ package se.uu.bmc.it.foa;
 import java.util.HashMap;
 
 /**
- * Utility class for mapping special chars (entity types) to their encoded
- * and decoded string representation. This class acts as an lookup table for
- * special chars <-> encoded representaion.
+ * Utility class for mapping special chars (entity types) to their encoded and decoded string
+ * representation. This class acts as an lookup table for special chars <-> encoded representaion.
  *
  * @author Anders Lövgren (QNET/BMC CompDept)
  */
@@ -46,6 +44,7 @@ public class EntityMap {
 
     /**
      * Lookup the encoded representation given the special char.
+     *
      * @param key The special char.
      * @return The special char string representation.
      */
@@ -55,6 +54,7 @@ public class EntityMap {
 
     /**
      * Lookup the special char given its encoded representation.
+     *
      * @param key The encoded string.
      * @return The special char value.
      */

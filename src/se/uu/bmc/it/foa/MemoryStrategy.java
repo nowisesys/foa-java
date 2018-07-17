@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2009 by Anders Lövgren and the Computing Department at BMC,
+ * Copyright (C) 2009-2018 by Anders Lövgren and the Computing Department at BMC,
  * Uppsala University.
  * 
  * FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
@@ -9,22 +9,19 @@
  * GNU Classpath Exception. See the file COPYING and COPYING.CLASSPATH bundled
  * with the foa-java source or visit http://www.gnu.org
  */
-
-/*
+/**
  * MemoryStrategy.java
  *
  * Created: Mar 31, 2009, 5:05:49 PM
  * Author:  Anders Lövgren (QNET/BMC CompDept)
  */
-
 package se.uu.bmc.it.foa;
 
 /**
- * This class implements a memory allocation strategy to be used by the
- * Decoder class. It gives the user of the decoder class an option to define
- * how aggressive memory gets allocated, as well as, giving an opportunity
- * to set the maximum number of bytes used for input buffer.
- * 
+ * This class implements a memory allocation strategy to be used by the Decoder class. It gives the
+ * user of the decoder class an option to define how aggressive memory gets allocated, as well as,
+ * giving an opportunity to set the maximum number of bytes used for input buffer.
+ *
  * @author Anders Lövgren (QNET/BMC CompDept)
  */
 public class MemoryStrategy {
@@ -49,6 +46,7 @@ public class MemoryStrategy {
 
     /**
      * Creates an memory strategy with unlimited memory allocation limit.
+     *
      * @param initSize The initial size.
      * @param stepSize The realloc size.
      */
@@ -60,6 +58,7 @@ public class MemoryStrategy {
 
     /**
      * Create an memory strategy.
+     *
      * @param initSize The initial size.
      * @param stepSize The realloc size.
      * @param maxSize The maximum memory allocation limit.

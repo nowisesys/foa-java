@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2009 by Anders Lövgren and the Computing Department at BMC,
+ * Copyright (C) 2009-2018 by Anders Lövgren and the Computing Department at BMC,
  * Uppsala University.
  *
  * FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
@@ -9,14 +9,12 @@
  * GNU Classpath Exception. See the file COPYING and COPYING.CLASSPATH bundled
  * with the foa-java source or visit http://www.gnu.org
  */
-
-/*
+/**
  * Entity.java
  *
  * Created: Mar 30, 2009, 5:24:50 PM
  * Author:  Anders Lövgren (QNET/BMC CompDept)
  */
-
 package se.uu.bmc.it.foa;
 
 /**
@@ -90,21 +88,22 @@ public class Entity {
 
     /**
      * Get the character mapped by the type argument.
+     *
      * @param type The entity type.
      */
     public static char getTypeChar(Type type) {
-        if(type == Type.StartObject) {
+        if (type == Type.StartObject) {
             return SpecialChar.StartObject.getValue();
-        } else if(type == Type.StartArray) {
+        } else if (type == Type.StartArray) {
             return SpecialChar.StartArray.getValue();
-        } else if(type == Type.EndObject) {
+        } else if (type == Type.EndObject) {
             return SpecialChar.EndObject.getValue();
-        } else if(type == Type.EndArray) {
+        } else if (type == Type.EndArray) {
             return SpecialChar.EndArray.getValue();
         }
         return 0;
     }
-    
+
     /**
      * Create an Entity object of data name type with data and name null.
      */
@@ -114,6 +113,7 @@ public class Entity {
 
     /**
      * The standard constructor for named data.
+     *
      * @param name The entity name.
      * @param data The entity data.
      * @param line The line number.
@@ -124,6 +124,7 @@ public class Entity {
 
     /**
      * The standard constructor for unnamed data.
+     *
      * @param data The entity data.
      * @param line The line number.
      */
@@ -133,6 +134,7 @@ public class Entity {
 
     /**
      * The standard constructor for special chars entity.
+     *
      * @param type The entity type.
      * @param line The line number.
      */
@@ -143,12 +145,13 @@ public class Entity {
 
     /**
      * The generic constructor of entity objects.
+     *
      * @param name The entity name.
      * @param data The entity data.
      * @param type The entity type.
      * @param line The line number.
      */
-     Entity(String name, String data, Type type, int line) {
+    Entity(String name, String data, Type type, int line) {
         this.name = name;
         this.data = data;
         this.type = type;

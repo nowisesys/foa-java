@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2009 by Anders Lövgren and the Computing Department at BMC,
+ * Copyright (C) 2009-2018 by Anders Lövgren and the Computing Department at BMC,
  * Uppsala University.
  *
  * FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
@@ -9,11 +9,9 @@
  * GNU Classpath Exception. See the file COPYING and COPYING.CLASSPATH bundled
  * with the foa-java source or visit http://www.gnu.org
  */
-
 package se.uu.bmc.it.foa;
 
 import java.io.OutputStream;
-import java.io.Writer;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -25,7 +23,7 @@ import se.uu.bmc.it.foa.Entity.SpecialChar;
 
 /**
  * Unit test for class Encoder.
- * 
+ *
  * @author Anders Lövgren (QNET/BMC CompDept)
  */
 public class EncoderTest {

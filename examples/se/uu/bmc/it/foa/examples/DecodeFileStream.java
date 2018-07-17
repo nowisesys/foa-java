@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2009 by Anders Lövgren and the Computing Department at BMC,
+ * Copyright (C) 2009-2018 by Anders Lövgren and the Computing Department at BMC,
  * Uppsala University.
  * 
  * FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
@@ -9,8 +9,7 @@
  * GNU Classpath Exception. See the file COPYING and COPYING.CLASSPATH bundled
  * with the foa-java source or visit http://www.gnu.org
  */
-
-/*
+/**
  * DecodeFileStream.java
  *
  * Created: Apr 1, 2009, 4:31:55 PM
@@ -32,6 +31,7 @@ public class DecodeFileStream {
 
     /**
      * Setup example parameters.
+     *
      * @param file The file to read.
      */
     DecodeFileStream(String file) {
@@ -49,16 +49,16 @@ public class DecodeFileStream {
             Entity entity;
             while ((entity = decoder.read()) != null) {
                 if (entity.hasName()) {
-                    System.out.println("[" +
-                            entity.getLine() + "]: " +
-                            entity.getName() + " = " +
-                            entity.getData() + " (" +
-                            entity.getType() + ")");
+                    System.out.println("["
+                            + entity.getLine() + "]: "
+                            + entity.getName() + " = "
+                            + entity.getData() + " ("
+                            + entity.getType() + ")");
                 } else {
-                    System.out.println("[" +
-                            entity.getLine() + "]: " +
-                            entity.getData() + " (" +
-                            entity.getType() + ")");
+                    System.out.println("["
+                            + entity.getLine() + "]: "
+                            + entity.getData() + " ("
+                            + entity.getType() + ")");
                 }
             }
 

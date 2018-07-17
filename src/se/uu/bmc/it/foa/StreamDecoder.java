@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2009 by Anders Lövgren and the Computing Department at BMC,
+ * Copyright (C) 2009-2018 by Anders Lövgren and the Computing Department at BMC,
  * Uppsala University.
  * 
  * FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
@@ -9,30 +9,29 @@
  * GNU Classpath Exception. See the file COPYING and COPYING.CLASSPATH bundled
  * with the foa-java source or visit http://www.gnu.org
  */
-
-/*
+/**
  * StreamDecoder.java
  *
  * Created: Apr 1, 2009, 3:10:30 AM
  * Author:  Anders Lövgren (QNET/BMC CompDept)
  */
-
 package se.uu.bmc.it.foa;
 
 import java.io.Reader;
 import java.io.IOException;
 
 /**
- * This is a convenience class that wraps up the stream functionality of the
- * more generic Decoder class.
+ * This is a convenience class that wraps up the stream functionality of the more generic Decoder
+ * class.
  *
  * @author Anders Lövgren (QNET/BMC CompDept)
  */
 public class StreamDecoder {
 
     /**
-     * Creates an decoder for decoding entities from the input stream using
-     * an default memory allocation strategy.
+     * Creates an decoder for decoding entities from the input stream using an default memory
+     * allocation strategy.
+     *
      * @param stream The input stream.
      */
     public StreamDecoder(Reader stream) {
@@ -41,6 +40,7 @@ public class StreamDecoder {
 
     /**
      * Creates an decoder for decoding entities from the input stream.
+     *
      * @param stream The input stream to decode.
      * @param strategy An memory allocation strategy to use.
      */
@@ -49,8 +49,9 @@ public class StreamDecoder {
     }
 
     /**
-     * Set the stream to read entity data from. This function will create a
-     * default memory allocation strategy if none exists yet.
+     * Set the stream to read entity data from. This function will create a default memory
+     * allocation strategy if none exists yet.
+     *
      * @param stream The input stream.
      */
     public void setStream(Reader stream) {
@@ -58,8 +59,8 @@ public class StreamDecoder {
     }
 
     /**
-     * Set the stream to read entity data from using the strategy as memory
-     * allocation strategy.
+     * Set the stream to read entity data from using the strategy as memory allocation strategy.
+     *
      * @param stream The input stream.
      * @param strategy The memory allocation strategy.
      */
@@ -69,6 +70,7 @@ public class StreamDecoder {
 
     /**
      * Get the current used input stream.
+     *
      * @return The input stream.
      */
     public Reader getStream() {
@@ -76,8 +78,7 @@ public class StreamDecoder {
     }
 
     /**
-     * Set the memory allocation strategy to be used when reading data from
-     * the input stream.
+     * Set the memory allocation strategy to be used when reading data from the input stream.
      *
      * @param strategy The memory allocation strategy.
      * @throws se.uu.bmc.it.foa.DecoderException if max size is smaller than current used size.
@@ -89,6 +90,7 @@ public class StreamDecoder {
 
     /**
      * Get the currently used memory allocation strategy.
+     *
      * @return The current memory allocation strategy.
      */
     public MemoryStrategy getStrategy() {
@@ -97,6 +99,7 @@ public class StreamDecoder {
 
     /**
      * Sets the option to true or false.
+     *
      * @param option The option to set.
      * @param val The option value.
      * @throws se.uu.bmc.it.foa.DecoderException
@@ -107,6 +110,7 @@ public class StreamDecoder {
 
     /**
      * Gets the option value.
+     *
      * @param option The option to get true or false of.
      * @return The option value.
      * @throws se.uu.bmc.it.foa.DecoderException
@@ -115,8 +119,9 @@ public class StreamDecoder {
         return decoder.getOption(option);
     }
 
-    /** 
+    /**
      * Read the next entity from the input stream.
+     *
      * @return The next entity or null on end of stream.
      * @throws IOException
      * @throws se.uu.bmc.it.foa.DecoderException
@@ -127,5 +132,5 @@ public class StreamDecoder {
     }
 
     private Decoder decoder;
-    
+
 }

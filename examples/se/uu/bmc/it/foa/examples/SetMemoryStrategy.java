@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2009 by Anders Lövgren and the Computing Department at BMC,
+ * Copyright (C) 2009-2018 by Anders Lövgren and the Computing Department at BMC,
  * Uppsala University.
  * 
  * FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
@@ -9,8 +9,7 @@
  * GNU Classpath Exception. See the file COPYING and COPYING.CLASSPATH bundled
  * with the foa-java source or visit http://www.gnu.org
  */
-
-/*
+/**
  * SetMemoryStrategy.java
  *
  * Created: Apr 1, 2009, 2:00:40 PM
@@ -30,10 +29,10 @@ public class SetMemoryStrategy {
      */
     void show(String label, MemoryStrategy strategy) {
         if (strategy != null) {
-            System.out.println(label +
-                    ": init=" + strategy.getInitSize() +
-                    ", step=" + strategy.getStepSize() +
-                    ", max=" + strategy.getMaxSize());
+            System.out.println(label
+                    + ": init=" + strategy.getInitSize()
+                    + ", step=" + strategy.getStepSize()
+                    + ", max=" + strategy.getMaxSize());
         } else {
             System.out.println(label + ": no memory strategy is set");
         }
