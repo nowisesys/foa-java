@@ -93,16 +93,22 @@ public class Entity {
      * @return char
      */
     public static char getTypeChar(Type type) {
-        if (type == Type.StartObject) {
-            return SpecialChar.StartObject.getValue();
-        } else if (type == Type.StartArray) {
-            return SpecialChar.StartArray.getValue();
-        } else if (type == Type.EndObject) {
-            return SpecialChar.EndObject.getValue();
-        } else if (type == Type.EndArray) {
-            return SpecialChar.EndArray.getValue();
+        if (null == type) {
+            return 0;
         }
-        return 0;
+
+        switch (type) {
+            case StartObject:
+                return SpecialChar.StartObject.getValue();
+            case StartArray:
+                return SpecialChar.StartArray.getValue();
+            case EndObject:
+                return SpecialChar.EndObject.getValue();
+            case EndArray:
+                return SpecialChar.EndArray.getValue();
+            default:
+                return 0;
+        }
     }
 
     /**
