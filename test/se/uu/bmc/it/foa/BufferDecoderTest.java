@@ -113,6 +113,7 @@ public class BufferDecoderTest {
      * @throws java.lang.Exception
      */
     @Test
+    @SuppressWarnings("UnusedAssignment")
     public void testRead() throws Exception {
         System.out.println("read()");
         Entity entity;
