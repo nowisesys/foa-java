@@ -1,6 +1,5 @@
 /*
- * Copyright (C) 2009-2018 by Anders Lövgren and the Computing Department at BMC,
- * Uppsala University.
+ * Copyright (C) 2009-2018 Anders Lövgren (Nowise Systems/Uppsala University)
  * 
  * FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
  * specification: http://it.bmc.uu.se/andlov/proj/libfoa/spec.php
@@ -13,7 +12,7 @@
  * DecodeRealloc.java
  *
  * Created: Apr 1, 2009, 10:03:19 PM
- * Author:  Anders Lövgren (QNET/BMC CompDept)
+ * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
  *
  * Description:
  * Test that realloc works when decoding by setting a silly
@@ -30,6 +29,10 @@ import java.io.FileNotFoundException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * Example on decode using small memory buffer (realloc in each iteration).
+ * @author Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ */
 public class DecodeRealloc {
 
     private final String file;

@@ -1,6 +1,5 @@
 /*
- * Copyright (C) 2009-2018 by Anders Lövgren and the Computing Department at BMC,
- * Uppsala University.
+ * Copyright (C) 2009-2018 Anders Lövgren (Nowise Systems/Uppsala University)
  *
  * FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
  * specification: http://it.bmc.uu.se/andlov/proj/libfoa/spec.php
@@ -13,7 +12,7 @@
  * EncodeEscape.java
  *
  * Created: Mar 31, 2009, 12:20:02 AM
- * Author:  Anders Lövgren (QNET/BMC CompDept)
+ * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
  *
  * Description:
  * Test escaping of special chars in output.
@@ -25,6 +24,10 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * Example on escape encoded data.
+ * @author Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ */
 public class EncodeEscape {
 
     private final String data;

@@ -1,6 +1,5 @@
 /*
- * Copyright (C) 2009-2018 by Anders Lövgren and the Computing Department at BMC,
- * Uppsala University.
+ * Copyright (C) 2009-2018 Anders Lövgren (Nowise Systems/Uppsala University)
  * 
  * FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
  * specification: http://it.bmc.uu.se/andlov/proj/libfoa/spec.php
@@ -13,7 +12,7 @@
  * SetMemoryStrategy.java
  *
  * Created: Apr 1, 2009, 2:00:40 PM
- * Author:  Anders Lövgren (QNET/BMC CompDept)
+ * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
  *
  * Description:
  * Demonstration on various aspects of the MemoryStrategy class.
@@ -24,6 +23,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import se.uu.bmc.it.foa.*;
 
+/**
+ * Example on using various memory strategies.
+ * @author Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ */
 public class SetMemoryStrategy {
 
     /**

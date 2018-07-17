@@ -1,6 +1,5 @@
 /*
- * Copyright (C) 2009-2018 by Anders Lövgren and the Computing Departmentity at BMC,
- * Uppsala University.
+ * Copyright (C) 2009-2018 Anders Lövgren (Nowise Systems/Uppsala University)
  * 
  * FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
  * specification: http://it.bmc.uu.se/andlov/proj/libfoa/spec.php
@@ -13,7 +12,7 @@
  * DecodeEscape.java
  *
  * Created: Apr 1, 2009, 3:07:19 PM
- * Author:  Anders Lövgren (QNET/BMC CompDept)
+ * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
  *
  * Description:
  * Tests decoding escaped input data from an memory buffer.
@@ -25,6 +24,11 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * Example on decode escaped data.
+ * 
+ * @author Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ */
 public class DecodeEscape {
 
     /**

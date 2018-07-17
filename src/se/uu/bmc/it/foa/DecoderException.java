@@ -1,6 +1,5 @@
 /*
- * Copyright (C) 2009-2018 by Anders Lövgren and the Computing Department at BMC,
- * Uppsala University.
+ * Copyright (C) 2009-2018 Anders Lövgren (Nowise Systems/Uppsala University)
  *
  * FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
  * specification: http://it.bmc.uu.se/andlov/proj/libfoa/spec.php
@@ -13,14 +12,14 @@
  * DecoderException.java
  *
  * Created: Mar 30, 2009, 1:51:15 PM
- * Author:  Anders Lövgren (QNET/BMC CompDept)
+ * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
  */
 package se.uu.bmc.it.foa;
 
 /**
  * The exception thrown by various methods in class Decoder.
  *
- * @author Anders Lövgren (QNET/BMC CompDept)
+ * @author Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
  */
 public class DecoderException extends Exception {
 

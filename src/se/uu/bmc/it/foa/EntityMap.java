@@ -1,6 +1,5 @@
 /*
- * Copyright (C) 2009-2018 by Anders Lövgren and the Computing Department at BMC,
- * Uppsala University.
+ * Copyright (C) 2009-2018 Anders Lövgren (Nowise Systems/Uppsala University)
  * 
  * FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
  * specification: http://it.bmc.uu.se/andlov/proj/libfoa/spec.php
@@ -13,7 +12,7 @@
  * EntityMap.java
  *
  * Created: Apr 1, 2009, 7:15:06 PM
- * Author:  Anders Lövgren (QNET/BMC CompDept)
+ * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
  */
 package se.uu.bmc.it.foa;
 
@@ -23,7 +22,7 @@ import java.util.HashMap;
  * Utility class for mapping special chars (entity types) to their encoded and decoded string
  * representation. This class acts as an lookup table for special chars &lt;-&gt; encoded representaion.
  *
- * @author Anders Lövgren (QNET/BMC CompDept)
+ * @author Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
  */
 public class EntityMap {
 
