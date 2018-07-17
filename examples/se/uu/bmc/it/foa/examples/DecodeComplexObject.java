@@ -17,6 +17,11 @@
  */
 package se.uu.bmc.it.foa.examples;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import se.uu.bmc.it.foa.DecoderException;
+
 /**
  *
  * @author Anders Lövgren (QNET/BMC CompDept)
@@ -27,15 +32,17 @@ public class DecodeComplexObject {
      * @param args The command line arguments
      */
     public static void main(String[] args) {
-        String file = "data/complex.txt";
-        if (args.length != 0) {
-            file = args[0];
-        }
-        DecodeFileStream decoder = new DecodeFileStream(file);
         try {
+            String file = "data/complex.txt";
+
+            if (args.length != 0) {
+                file = args[0];
+            }
+
+            DecodeFileStream decoder = new DecodeFileStream(file);
             decoder.run();
-        } catch (Exception e) {
-            System.err.print(e);
+        } catch (IOException | DecoderException ex) {
+            Logger.getLogger(DecodeComplexObject.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }

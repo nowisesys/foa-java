@@ -23,10 +23,12 @@ package se.uu.bmc.it.foa.examples;
 
 import se.uu.bmc.it.foa.*;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class DecodeLargeObject {
 
-    private int num;
+    private final int num;
 
     DecodeLargeObject(int num) {
         this.num = num;
@@ -68,15 +70,17 @@ public class DecodeLargeObject {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int num = 3000000;
-        if (args.length != 0) {
-            num = Integer.parseInt(args[0]);
-        }
-        DecodeLargeObject decoder = new DecodeLargeObject(num);
         try {
+            int num = 3000000;
+            
+            if (args.length != 0) {
+                num = Integer.parseInt(args[0]);
+            }
+            
+            DecodeLargeObject decoder = new DecodeLargeObject(num);
             decoder.run();
-        } catch (Exception e) {
-            System.err.print(e);
+        } catch (IOException | DecoderException ex) {
+            Logger.getLogger(DecodeLargeObject.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }

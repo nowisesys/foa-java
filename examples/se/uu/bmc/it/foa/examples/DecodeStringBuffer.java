@@ -22,6 +22,8 @@ package se.uu.bmc.it.foa.examples;
 
 import se.uu.bmc.it.foa.*;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class DecodeStringBuffer {
 
@@ -36,6 +38,8 @@ public class DecodeStringBuffer {
 
     /**
      * Run example code.
+     * @throws java.io.IOException
+     * @throws se.uu.bmc.it.foa.DecoderException
      */
     public void run() throws IOException, DecoderException {
         Decoder decoder = new Decoder(buffer);
@@ -44,9 +48,9 @@ public class DecodeStringBuffer {
         System.out.println("Buffer:\n---------\n" + buffer + "\n");
         while ((entity = decoder.read()) != null) {
             if (entity.hasName()) {
-                System.out.println(entity.getName() + " = " + entity.getData() + "\t(type=" + entity.getType().toString());
+                System.out.println(entity.getName() + " = " + entity.getData() + "\t(" + entity.getType().toString() + ")");
             } else {
-                System.out.println(entity.getData() + "\t(type=" + entity.getType().toString());
+                System.out.println(entity.getData() + "\t(" + entity.getType().toString() + ")");
             }
         }
     }
@@ -55,13 +59,12 @@ public class DecodeStringBuffer {
      * @param args The command line arguments.
      */
     public static void main(String[] args) {
-        String buffer = "persons = [\n(\nname=adam\nage = 37\n)\n(\nname=bertil\nage=45\n)\n]\n";
-        DecodeStringBuffer decoder = new DecodeStringBuffer(buffer);
-
         try {
+            String buffer = "persons = [\n(\nname=adam\nage = 37\n)\n(\nname=bertil\nage=45\n)\n]\n";
+            DecodeStringBuffer decoder = new DecodeStringBuffer(buffer);
             decoder.run();
-        } catch (Exception e) {
-            System.err.print(e);
+        } catch (IOException | DecoderException ex) {
+            Logger.getLogger(DecodeStringBuffer.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }

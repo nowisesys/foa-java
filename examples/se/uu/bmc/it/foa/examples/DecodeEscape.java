@@ -22,6 +22,8 @@ package se.uu.bmc.it.foa.examples;
 
 import se.uu.bmc.it.foa.*;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class DecodeEscape {
 
@@ -75,11 +77,11 @@ public class DecodeEscape {
      * @param args The command line arguments.
      */
     public static void main(String[] args) {
-        DecodeEscape decoder = new DecodeEscape();
         try {
+            DecodeEscape decoder = new DecodeEscape();
             decoder.run();
-        } catch (Exception e) {
-            System.err.print(e);
+        } catch (IOException | DecoderException ex) {
+            Logger.getLogger(DecodeEscape.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }

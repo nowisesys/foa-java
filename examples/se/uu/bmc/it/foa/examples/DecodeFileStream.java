@@ -24,10 +24,12 @@ import se.uu.bmc.it.foa.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class DecodeFileStream {
 
-    private String file;
+    private final String file;
 
     /**
      * Setup example parameters.
@@ -71,15 +73,17 @@ public class DecodeFileStream {
      * @param args The command line arguments.
      */
     public static void main(String[] args) {
-        String file = "data/person.txt";
-        if (args.length != 0) {
-            file = args[0];
-        }
-        DecodeFileStream decoder = new DecodeFileStream(file);
         try {
+            String file = "data/person.txt";
+
+            if (args.length != 0) {
+                file = args[0];
+            }
+
+            DecodeFileStream decoder = new DecodeFileStream(file);
             decoder.run();
-        } catch (Exception e) {
-            System.err.print(e);
+        } catch (IOException | DecoderException ex) {
+            Logger.getLogger(DecodeFileStream.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }

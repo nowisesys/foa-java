@@ -27,6 +27,8 @@ import se.uu.bmc.it.foa.*;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class DecodeRealloc {
 
@@ -66,16 +68,16 @@ public class DecodeRealloc {
      * @param args The command line arguments.
      */
     public static void main(String[] args) {
-        String file = "person.txt";
-        if (args.length != 0) {
-            file = args[0];
-        }
-
-        DecodeRealloc decoder = new DecodeRealloc(file);
         try {
+            String file = "data/person.txt";
+            if (args.length != 0) {
+                file = args[0];
+            }
+
+            DecodeRealloc decoder = new DecodeRealloc(file);
             decoder.run();
-        } catch (Exception e) {
-            System.err.println(e);
+        } catch (IOException | DecoderException ex) {
+            Logger.getLogger(DecodeRealloc.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }

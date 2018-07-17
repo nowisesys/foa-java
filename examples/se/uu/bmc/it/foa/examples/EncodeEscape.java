@@ -22,6 +22,8 @@ package se.uu.bmc.it.foa.examples;
 
 import se.uu.bmc.it.foa.*;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class EncodeEscape {
 
@@ -57,11 +59,11 @@ public class EncodeEscape {
      * @param args The command line arguments.
      */
     public static void main(String[] args) {
-        EncodeEscape encoder = new EncodeEscape("a(b[c]d)e=");
         try {
+            EncodeEscape encoder = new EncodeEscape("a(b[c]d)e=");
             encoder.run();
-        } catch (Exception e) {
-            System.err.println(e);
+        } catch (IOException | EncoderException ex) {
+            Logger.getLogger(EncodeEscape.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }

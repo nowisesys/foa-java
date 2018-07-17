@@ -22,6 +22,8 @@ package se.uu.bmc.it.foa.examples;
 
 import se.uu.bmc.it.foa.*;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class EncodeObjectArray {
 
@@ -74,11 +76,11 @@ public class EncodeObjectArray {
      * @param args The command line arguments.
      */
     public static void main(String[] args) {
-        EncodeObjectArray encoder = new EncodeObjectArray();
         try {
+            EncodeObjectArray encoder = new EncodeObjectArray();
             encoder.run();
-        } catch (Exception e) {
-            System.err.print(e);
+        } catch (IOException ex) {
+            Logger.getLogger(EncodeObjectArray.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

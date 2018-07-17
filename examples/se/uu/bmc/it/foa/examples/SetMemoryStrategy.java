@@ -20,6 +20,8 @@
  */
 package se.uu.bmc.it.foa.examples;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import se.uu.bmc.it.foa.*;
 
 public class SetMemoryStrategy {
@@ -67,11 +69,11 @@ public class SetMemoryStrategy {
      * @param args The command line arguments.
      */
     public static void main(String[] args) {
-        SetMemoryStrategy strategy = new SetMemoryStrategy();
         try {
+            SetMemoryStrategy strategy = new SetMemoryStrategy();
             strategy.run();
-        } catch (Exception e) {
-            System.err.print(e);
+        } catch (DecoderException ex) {
+            Logger.getLogger(SetMemoryStrategy.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }

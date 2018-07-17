@@ -29,6 +29,8 @@ package se.uu.bmc.it.foa.examples;
 import se.uu.bmc.it.foa.*;
 import java.io.StringWriter;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class EncodeStringStream {
 
@@ -58,11 +60,11 @@ public class EncodeStringStream {
      * @param args The command line arguments.
      */
     public static void main(String[] args) {
-        EncodeStringStream encoder = new EncodeStringStream();
         try {
+            EncodeStringStream encoder = new EncodeStringStream();
             encoder.run();
-        } catch (IOException e) {
-            System.out.print(e);
+        } catch (IOException ex) {
+            Logger.getLogger(EncodeStringStream.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }

@@ -25,6 +25,8 @@ import java.io.FileWriter;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class EncodeFileStream {
 
@@ -39,6 +41,8 @@ public class EncodeFileStream {
 
     /**
      * Run example code.
+     *
+     * @throws java.io.IOException
      */
     public void run() throws IOException {
         FileWriter stream = new FileWriter(file);
@@ -62,17 +66,20 @@ public class EncodeFileStream {
      */
     public static void main(String[] args) {
         String file = "data/person.txt";
+
         if (args.length != 0) {
             file = args[0];
         }
 
-        EncodeFileStream encoder = new EncodeFileStream(file);
         try {
+            EncodeFileStream encoder = new EncodeFileStream(file);
             encoder.run();
         } catch (FileNotFoundException e) {
-            System.err.println("Failed open " + file + ", " + e);
+            String message = "Failed open " + file + ", " + e;
+            Logger.getLogger(EncodeEscape.class.getName()).log(Level.SEVERE, null, message);
         } catch (IOException e) {
-            System.err.println("Failed write data to " + file);
+            String message = "Failed write data to " + file;
+            Logger.getLogger(EncodeEscape.class.getName()).log(Level.SEVERE, null, message);
         }
     }
 }
