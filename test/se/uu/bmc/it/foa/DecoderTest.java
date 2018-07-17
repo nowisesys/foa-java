@@ -15,6 +15,7 @@ import java.io.Reader;
 import java.io.InputStreamReader;
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -63,7 +64,7 @@ public class DecoderTest {
         // Test with no buffer:
         char[] buffer = null;
         instance.setBuffer(buffer);
-        assertEquals(null, instance.getBuffer());
+        assertArrayEquals(null, instance.getBuffer());
         // Test with buffer:
         buffer = new char[3];
         buffer[0] = 'F';
@@ -71,7 +72,7 @@ public class DecoderTest {
         buffer[2] = 'A';
         instance.setBuffer(buffer);
         // Should be the same object:
-        assertEquals(buffer, instance.getBuffer());
+        assertArrayEquals(buffer, instance.getBuffer());
         boolean match = true;
         char[] result = instance.getBuffer();
         for (int i = 0; i < buffer.length; ++i) {
@@ -90,7 +91,7 @@ public class DecoderTest {
         // Test with no buffer:
         byte[] buffer = null;
         instance.setBuffer(buffer);
-        assertEquals(null, instance.getBuffer());
+        assertArrayEquals(null, instance.getBuffer());
         // Test with buffer:
         buffer = new byte[3];
         buffer[0] = 70;
@@ -115,7 +116,7 @@ public class DecoderTest {
         String str = "Test string";
         char[] buffer = str.toCharArray();
         instance.setBuffer(buffer);
-        assertEquals(buffer, instance.getBuffer());
+        assertArrayEquals(buffer, instance.getBuffer());
         String ref = new String(instance.getBuffer());
         boolean match = str.compareTo(ref) == 0;
         assertEquals(true, match);
