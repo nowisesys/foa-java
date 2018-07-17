@@ -28,7 +28,7 @@ import java.io.IOException;
 
 public class EncodeFileStream {
 
-    private String file;
+    private final String file;
 
     /**
      * Setup example parameters.

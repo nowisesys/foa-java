@@ -131,6 +131,6 @@ public class StreamDecoder {
         return decoder.read();
     }
 
-    private Decoder decoder;
+    private final Decoder decoder;
 
 }

@@ -168,6 +168,6 @@ public class BufferEncoder {
         return encoder.getBuffer();
     }
 
-    private Encoder encoder;
+    private final Encoder encoder;
 
 }

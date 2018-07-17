@@ -166,5 +166,5 @@ public class StreamEncoder {
         encoder.write(name, data);
     }
 
-    private Encoder encoder;
+    private final Encoder encoder;
 }

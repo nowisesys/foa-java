@@ -25,7 +25,7 @@ import java.io.IOException;
 
 public class DecodeStringBuffer {
 
-    private String buffer;
+    private final String buffer;
 
     /**
      * Setup example parameters.

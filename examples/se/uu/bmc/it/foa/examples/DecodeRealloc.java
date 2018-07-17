@@ -30,7 +30,7 @@ import java.io.FileNotFoundException;
 
 public class DecodeRealloc {
 
-    private String file;
+    private final String file;
 
     /**
      * Setup example parameters.

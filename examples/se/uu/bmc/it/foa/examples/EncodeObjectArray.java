@@ -38,7 +38,7 @@ public class EncodeObjectArray {
         int age;
     }
 
-    private Person[] persons;   // The array of persons.
+    private final Person[] persons;   // The array of persons.
 
     /**
      * Setup example parameters.

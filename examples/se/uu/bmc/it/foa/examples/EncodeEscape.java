@@ -25,7 +25,7 @@ import java.io.IOException;
 
 public class EncodeEscape {
 
-    private String data;
+    private final String data;
 
     /**
      * Setup example parameters.

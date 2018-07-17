@@ -26,7 +26,7 @@ import se.uu.bmc.it.foa.Decoder.Option;
  */
 public class BufferDecoderTest {
 
-    private String string = "Hello world!\n";
+    private final String string = "Hello world!\n";
     private char[] buffer;
     private BufferDecoder decoder;
 

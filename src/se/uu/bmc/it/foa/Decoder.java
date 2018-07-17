@@ -39,6 +39,7 @@ public class Decoder {
      * Creates an decoder object using an default memory allocation strategy.
      */
     public Decoder() {
+        this.map = new EntityMap();
         this.strategy = new MemoryStrategy();
         this.stream = null;
         reset(null, false);
@@ -62,6 +63,7 @@ public class Decoder {
      * @param buffer The external buffer.
      */
     public Decoder(char[] buffer) {
+        this.map = new EntityMap();
         this.stream = null;
         this.strategy = null;
         reset(buffer, true);
@@ -84,6 +86,7 @@ public class Decoder {
      * @param stream The input stream.
      */
     public Decoder(Reader stream) {
+        this.map = new EntityMap();
         this.strategy = new MemoryStrategy();
         this.stream = stream;
         reset(new char[strategy.getInitSize()], false);
@@ -96,6 +99,7 @@ public class Decoder {
      * @param strategy An memory allocation strategy to use.
      */
     public Decoder(Reader stream, MemoryStrategy strategy) {
+        this.map = new EntityMap();
         this.strategy = strategy;
         this.stream = stream;
         reset(new char[strategy.getInitSize()], false);
@@ -427,7 +431,7 @@ public class Decoder {
     }
     private Reader stream;
     private MemoryStrategy strategy;
-    private EntityMap map = new EntityMap();
+    private final EntityMap map;
     private char[] buffer;  // The data buffer.
     private int ppos;       // Put data position (when reading stream)
     private int line;       // The current line.

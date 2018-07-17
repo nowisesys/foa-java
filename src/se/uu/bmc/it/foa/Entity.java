@@ -187,7 +187,7 @@ public class Entity {
             this.value = value;
         }
 
-        private char value;
+        private final char value;
     }
 
     private String name;
