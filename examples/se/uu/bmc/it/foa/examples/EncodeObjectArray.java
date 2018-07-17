@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2009 by Anders Lövgren and the Computing Department at BMC,
+ * Copyright (C) 2009-2018 by Anders Lövgren and the Computing Department at BMC,
  * Uppsala University.
  * 
  * FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
@@ -9,8 +9,7 @@
  * GNU Classpath Exception. See the file COPYING and COPYING.CLASSPATH bundled
  * with the foa-java source or visit http://www.gnu.org
  */
-
-/*
+/**
  * EncodeObjectArray.java
  *
  * Created: Apr 1, 2009, 1:00:24 PM
@@ -19,7 +18,6 @@
  * Description:
  * Show how to encode an array of objects (persons)
  */
-
 package se.uu.bmc.it.foa.examples;
 
 import se.uu.bmc.it.foa.*;
@@ -32,6 +30,7 @@ public class EncodeObjectArray {
      * This class represent a simplified view of an person.
      */
     private class Person {
+
         Person(String name, int age) {
             this.name = name;
             this.age = age;
@@ -56,8 +55,7 @@ public class EncodeObjectArray {
      * Run example code.
      */
     void run() throws IOException {
-        OutputStreamWriter stream = new OutputStreamWriter(System.out);
-        Encoder encoder = new Encoder(stream);
+        Encoder encoder = new Encoder(System.out);
 
         try {
             encoder.write(Entity.SpecialChar.StartArray);
@@ -69,7 +67,7 @@ public class EncodeObjectArray {
             }
             encoder.write(Entity.SpecialChar.EndArray);
         } finally {
-            stream.close();
+            encoder.getStream().close();
         }
     }
 

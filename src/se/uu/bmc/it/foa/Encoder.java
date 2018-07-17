@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2009 by Anders Lövgren and the Computing Department at BMC,
+ * Copyright (C) 2009-2018 by Anders Lövgren and the Computing Department at BMC,
  * Uppsala University.
  *
  * FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
@@ -9,8 +9,7 @@
  * GNU Classpath Exception. See the file COPYING and COPYING.CLASSPATH bundled
  * with the foa-java source or visit http://www.gnu.org
  */
-
-/*
+/**
  * Encoder.java
  *
  * Created: Mar 30, 2009, 1:50:13 PM
@@ -25,6 +24,7 @@ import java.io.OutputStreamWriter;
 
 /**
  * This class implements the encoder part of the FOA specification.
+ *
  * @author Anders Lövgren (QNET/BMC CompDept)
  */
 public class Encoder {
@@ -33,40 +33,65 @@ public class Encoder {
      * Creates an encoder object without associated stream.
      */
     public Encoder() {
-        stream = null;
         writer = null;
     }
 
     /**
-     * Create an encoder object with an associated stream that the encoded
-     * string (entity) gets written to.
+     * Create an encoder object with an associated stream that the encoded string (entity) gets
+     * written to.
+     *
+     * @param stream The output character stream.
+     */
+    public Encoder(Writer stream) {
+        this.writer = stream;
+    }
+
+    /**
+     * Create an encoder object with an associated stream that the encoded string (entity) gets
+     * written to.
+     *
      * @param stream The output stream.
      */
     public Encoder(OutputStream stream) {
-        this.stream = stream;
-        this.writer = stream != null ? new OutputStreamWriter(stream) : null;
+        if (stream != null) {
+            this.writer = new OutputStreamWriter(stream);
+        }
     }
 
     /**
      * Sets the associated write stream.
-     * @param stream The output stream.
+     *
+     * @param stream The output character stream.
+     * @see se.uu.bmc.it.foa.Encoder#Encoder(java.io.Writer)
+     */
+    public void setStream(Writer stream) {
+        this.writer = stream;
+    }
+
+    /**
+     * Sets the associated write stream.
+     *
+     * @param stream The output character stream.
      * @see se.uu.bmc.it.foa.Encoder#Encoder(java.io.Writer)
      */
     public void setStream(OutputStream stream) {
-        this.stream = stream;
-        this.writer = stream != null ? new OutputStreamWriter(stream) : null;
+        if (stream != null) {
+            this.writer = new OutputStreamWriter(stream);
+        }
     }
 
     /**
      * Get the stream associated with this decoder object.
+     *
      * @return The write stream.
      */
-    public OutputStream getStream() {
-        return stream;
+    public Writer getStream() {
+        return writer;
     }
 
     /**
      * Return the string representation of the last encoded entity.
+     *
      * @return The encoded entity.
      */
     public String getBuffer() {
@@ -75,6 +100,7 @@ public class Encoder {
 
     /**
      * Write an anonymous special char entity to the buffer.
+     *
      * @param spec The special char.
      * @see se.uu.bmc.it.foa.Entity.SpecialChar
      * @throws java.io.IOException
@@ -88,6 +114,7 @@ public class Encoder {
 
     /**
      * Write an named special char entity to the buffer.
+     *
      * @param name The name of the special char.
      * @param spec The special char.
      * @see se.uu.bmc.it.foa.Entity.SpecialChar
@@ -107,6 +134,7 @@ public class Encoder {
 
     /**
      * Write anonymous data entity to the buffer.
+     *
      * @param data The data.
      * @throws java.io.IOException
      */
@@ -119,6 +147,7 @@ public class Encoder {
 
     /**
      * Specialization for writing anonymous integer values.
+     *
      * @param data The integer value.
      * @throws java.io.IOException
      */
@@ -131,6 +160,7 @@ public class Encoder {
 
     /**
      * Specialization for writing anonymous float point value.
+     *
      * @param data The float point number (double)
      * @throws java.io.IOException
      */
@@ -143,6 +173,7 @@ public class Encoder {
 
     /**
      * Specialization for writing named integer value.
+     *
      * @param name The data name.
      * @param data The integer value.
      * @throws java.io.IOException
@@ -156,6 +187,7 @@ public class Encoder {
 
     /**
      * Specialization for writing named float point value.
+     *
      * @param name The data name.
      * @param data The float point number (double)
      * @throws java.io.IOException
@@ -169,6 +201,7 @@ public class Encoder {
 
     /**
      * Write named data entity to the buffer.
+     *
      * @param name The data name.
      * @param data The data.
      * @throws java.io.IOException
@@ -181,8 +214,8 @@ public class Encoder {
     }
 
     /**
-     * Get string with all special chars replaced by their HTTP encoded
-     * equivalents.
+     * Get string with all special chars replaced by their HTTP encoded equivalents.
+     *
      * @param str The string to escape.
      * @return The escaped string.
      */
@@ -211,6 +244,7 @@ public class Encoder {
 
     /**
      * Sets the option to true or false.
+     *
      * @param option The option to set.
      * @param val The option value.
      * @throws se.uu.bmc.it.foa.EncoderException
@@ -225,6 +259,7 @@ public class Encoder {
 
     /**
      * Gets the option value.
+     *
      * @param option The option to get true or false of.
      * @return The option value.
      * @throws se.uu.bmc.it.foa.EncoderException
@@ -244,8 +279,7 @@ public class Encoder {
 
         EnableEscape
     }
-    private OutputStream stream;
-    private Writer writer;
+    private Writer writer = null;
     private String buffer;
     private boolean escape = true;
 }

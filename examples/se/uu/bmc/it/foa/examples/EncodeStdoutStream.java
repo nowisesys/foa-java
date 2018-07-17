@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2009 by Anders Lövgren and the Computing Department at BMC,
+ * Copyright (C) 2009-2018 by Anders Lövgren and the Computing Department at BMC,
  * Uppsala University.
  * 
  * FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
@@ -9,8 +9,7 @@
  * GNU Classpath Exception. See the file COPYING and COPYING.CLASSPATH bundled
  * with the foa-java source or visit http://www.gnu.org
  */
-
-/*
+/**
  * EncodeStdoutStream.java
  *
  * Created: Apr 1, 2009, 1:06:45 PM
@@ -32,8 +31,7 @@ import java.io.IOException;
 public class EncodeStdoutStream {
 
     void run() throws IOException {
-        OutputStreamWriter stream = new OutputStreamWriter(System.out);
-        Encoder encoder = new Encoder(stream);
+        Encoder encoder = new Encoder(System.out);
 
         try {
             //
@@ -44,7 +42,7 @@ public class EncodeStdoutStream {
             encoder.write("age", 24);
             encoder.write(Entity.SpecialChar.EndObject);
         } finally {
-            stream.close();
+            encoder.getStream().close();
         }
 
     }
