@@ -2,7 +2,7 @@
  * Copyright (C) 2009-2019 Anders Lövgren (Nowise Systems/Uppsala University)
  * 
  * FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
- * specification: http://it.bmc.uu.se/andlov/proj/libfoa/spec.php
+ * specification: https://nowise.se/oss/libfoa/spec
  * 
  * This source is released under GPL3 (GNU General Public License) with the
  * GNU Classpath Exception. See the file COPYING and COPYING.CLASSPATH bundled

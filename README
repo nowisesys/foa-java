@@ -21,7 +21,7 @@ This is an Java (tm) library implementing the FOA encoding/decoding method.
 ** SPECIFICATION:
    
    This library (foa-java) implements version 1.0 of the FOA specification. 
-   The spec can be found here: http://it.bmc.uu.se/andlov/proj/libfoa/spec.php
+   The spec can be found here: https://nowise.se/oss/libfoa/spec
    
 ** LICENSE:
 
