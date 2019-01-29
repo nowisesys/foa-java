@@ -30,6 +30,7 @@ import java.util.logging.Logger;
 
 /**
  * Example on encoding file stream.
+ *
  * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class EncodeFileStream {

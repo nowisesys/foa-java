@@ -29,6 +29,7 @@ import java.util.logging.Logger;
 
 /**
  * Example on decode large number of objects.
+ *
  * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class DecodeLargeObject {
@@ -77,11 +78,11 @@ public class DecodeLargeObject {
     public static void main(String[] args) {
         try {
             int num = 3000000;
-            
+
             if (args.length != 0) {
                 num = Integer.parseInt(args[0]);
             }
-            
+
             DecodeLargeObject decoder = new DecodeLargeObject(num);
             decoder.run();
         } catch (IOException | DecoderException ex) {

@@ -34,6 +34,7 @@ import java.util.logging.Logger;
 
 /**
  * Example on encoding to string stream.
+ *
  * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class EncodeStringStream {

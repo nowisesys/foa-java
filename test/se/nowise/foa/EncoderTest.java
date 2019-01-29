@@ -10,7 +10,6 @@
  */
 package se.nowise.foa;
 
-import se.nowise.foa.Encoder;
 import java.io.OutputStream;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -72,6 +71,7 @@ public class EncoderTest {
 
     /**
      * Test of write method, of class Encoder.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -90,6 +90,7 @@ public class EncoderTest {
 
     /**
      * Test of write method, of class Encoder.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -102,6 +103,7 @@ public class EncoderTest {
 
     /**
      * Test of write method, of class Encoder.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -138,6 +140,7 @@ public class EncoderTest {
 
     /**
      * Test of write method, of class Encoder.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -150,6 +153,7 @@ public class EncoderTest {
 
     /**
      * Test of write method, of class Encoder.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -162,6 +166,7 @@ public class EncoderTest {
 
     /**
      * Test of write method, of class Encoder.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -219,6 +224,7 @@ public class EncoderTest {
 
     /**
      * Test of write method, of class Encoder.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -231,6 +237,7 @@ public class EncoderTest {
 
     /**
      * Test of write method, of class Encoder.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -243,6 +250,7 @@ public class EncoderTest {
 
     /**
      * Test of setOption method, of class Encoder.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -266,6 +274,7 @@ public class EncoderTest {
 
     /**
      * Test of getOption method, of class Encoder.
+     *
      * @throws java.lang.Exception
      */
     @Test

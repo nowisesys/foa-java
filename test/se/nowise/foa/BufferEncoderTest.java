@@ -10,7 +10,6 @@
  */
 package se.nowise.foa;
 
-import se.nowise.foa.BufferEncoder;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -48,6 +47,7 @@ public class BufferEncoderTest {
 
     /**
      * Test of getBuffer method, of class BufferEncoder.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -61,6 +61,7 @@ public class BufferEncoderTest {
 
     /**
      * Test of setOption method, of class BufferEncoder.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -76,6 +77,7 @@ public class BufferEncoderTest {
 
     /**
      * Test of getOption method, of class BufferEncoder.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -88,6 +90,7 @@ public class BufferEncoderTest {
 
     /**
      * Test of write method, of class BufferEncoder.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -102,6 +105,7 @@ public class BufferEncoderTest {
 
     /**
      * Test of write method, of class BufferEncoder.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -116,6 +120,7 @@ public class BufferEncoderTest {
 
     /**
      * Test of write method, of class BufferEncoder.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -127,6 +132,7 @@ public class BufferEncoderTest {
 
     /**
      * Test of write method, of class BufferEncoder.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -139,6 +145,7 @@ public class BufferEncoderTest {
 
     /**
      * Test of write method, of class BufferEncoder.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -151,6 +158,7 @@ public class BufferEncoderTest {
 
     /**
      * Test of write method, of class BufferEncoder.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -163,6 +171,7 @@ public class BufferEncoderTest {
 
     /**
      * Test of write method, of class BufferEncoder.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -175,6 +184,7 @@ public class BufferEncoderTest {
 
     /**
      * Test of write method, of class BufferEncoder.
+     *
      * @throws java.lang.Exception
      */
     @Test

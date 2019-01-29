@@ -30,6 +30,7 @@ import java.util.logging.Logger;
 
 /**
  * Example on decode file stream.
+ *
  * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class DecodeFileStream {

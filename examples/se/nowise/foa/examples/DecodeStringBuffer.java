@@ -28,7 +28,7 @@ import java.util.logging.Logger;
 
 /**
  * Example on decoding string buffer.
- * 
+ *
  * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class DecodeStringBuffer {
@@ -44,8 +44,9 @@ public class DecodeStringBuffer {
 
     /**
      * Run example code.
+     *
      * @throws java.io.IOException
-     * @throws se.uu.bmc.it.foa.DecoderException
+     * @throws DecoderException
      */
     public void run() throws IOException, DecoderException {
         Decoder decoder = new Decoder(buffer);

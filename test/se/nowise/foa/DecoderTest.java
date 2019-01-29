@@ -10,9 +10,6 @@
  */
 package se.nowise.foa;
 
-import se.nowise.foa.MemoryStrategy;
-import se.nowise.foa.Entity;
-import se.nowise.foa.Decoder;
 import java.io.Reader;
 import java.io.InputStreamReader;
 import org.junit.After;
@@ -152,6 +149,7 @@ public class DecoderTest {
 
     /**
      * Test of setStrategy method, of class Decoder.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -181,6 +179,7 @@ public class DecoderTest {
 
     /**
      * Test of setOption method, of class Decoder.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -250,6 +249,7 @@ public class DecoderTest {
 
     /**
      * Test of getOption method, of class Decoder.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -300,6 +300,7 @@ public class DecoderTest {
 
     /**
      * Test of read method, of class Decoder.
+     *
      * @throws java.lang.Exception
      */
     @Test

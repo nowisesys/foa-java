@@ -31,6 +31,7 @@ import java.util.logging.Logger;
 
 /**
  * Example on encoding data to stdout stream.
+ *
  * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class EncodeStdoutStream {

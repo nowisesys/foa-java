@@ -10,8 +10,6 @@
  */
 package se.nowise.foa;
 
-import se.nowise.foa.BufferDecoder;
-import se.nowise.foa.Entity;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -86,6 +84,7 @@ public class BufferDecoderTest {
 
     /**
      * Test of setOption method, of class BufferDecoder.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -100,6 +99,7 @@ public class BufferDecoderTest {
 
     /**
      * Test of getOption method, of class BufferDecoder.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -111,6 +111,7 @@ public class BufferDecoderTest {
 
     /**
      * Test of read method, of class BufferDecoder.
+     *
      * @throws java.lang.Exception
      */
     @Test

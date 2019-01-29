@@ -23,7 +23,7 @@ import se.nowise.foa.DecoderException;
 
 /**
  * Example on decoding complex objects.
- * 
+ *
  * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class DecodeComplexObject {

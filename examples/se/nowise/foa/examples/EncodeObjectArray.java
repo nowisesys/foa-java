@@ -27,6 +27,7 @@ import java.util.logging.Logger;
 
 /**
  * Example on encoding array of objects.
+ *
  * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class EncodeObjectArray {

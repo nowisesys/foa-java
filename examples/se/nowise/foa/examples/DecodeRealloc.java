@@ -34,6 +34,7 @@ import java.util.logging.Logger;
 
 /**
  * Example on decode using small memory buffer (realloc in each iteration).
+ *
  * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class DecodeRealloc {

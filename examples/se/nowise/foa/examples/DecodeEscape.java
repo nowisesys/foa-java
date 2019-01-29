@@ -28,7 +28,7 @@ import java.util.logging.Logger;
 
 /**
  * Example on decode escaped data.
- * 
+ *
  * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class DecodeEscape {

@@ -10,7 +10,6 @@
  */
 package se.nowise.foa;
 
-import se.nowise.foa.EntityMap;
 import java.util.HashMap;
 import org.junit.After;
 import org.junit.AfterClass;

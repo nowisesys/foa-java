@@ -10,7 +10,6 @@
  */
 package se.nowise.foa;
 
-import se.nowise.foa.Entity;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

@@ -27,6 +27,7 @@ import java.util.logging.Logger;
 
 /**
  * Example on using various memory strategies.
+ *
  * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class SetMemoryStrategy {
