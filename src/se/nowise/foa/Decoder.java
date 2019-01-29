@@ -12,7 +12,7 @@
  * Decoder.java
  *
  * Created: Mar 30, 2009, 1:50:40 PM
- * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * Author:  Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 package se.nowise.foa;
 
@@ -22,7 +22,7 @@ import java.io.IOException;
 /**
  * This class implements the decoder part of the FOA specification.
  *
- * @author Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class Decoder {
 

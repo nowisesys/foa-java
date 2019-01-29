@@ -12,9 +12,9 @@
  * DecodeComplexObject.java
  *
  * Created: Apr 20, 2009, 5:27:03 PM
- * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * Author:  Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
-package se.uu.bmc.it.foa.examples;
+package se.nowise.foa.examples;
 
 import java.io.IOException;
 import java.util.logging.Level;
@@ -24,7 +24,7 @@ import se.nowise.foa.DecoderException;
 /**
  * Example on decoding complex objects.
  * 
- * @author Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class DecodeComplexObject {
 

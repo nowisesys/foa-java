@@ -12,12 +12,12 @@
  * DecodeFileStream.java
  *
  * Created: Apr 1, 2009, 4:31:55 PM
- * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * Author:  Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  *
  * Description:
  * Demonstrate how to decode an file input stream.
  */
-package se.uu.bmc.it.foa.examples;
+package se.nowise.foa.examples;
 
 import se.nowise.foa.Entity;
 import se.nowise.foa.Decoder;
@@ -30,7 +30,7 @@ import java.util.logging.Logger;
 
 /**
  * Example on decode file stream.
- * @author Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class DecodeFileStream {
 

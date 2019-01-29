@@ -12,12 +12,12 @@
  * EncodeObjectArray.java
  *
  * Created: Apr 1, 2009, 1:00:24 PM
- * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * Author:  Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  *
  * Description:
  * Show how to encode an array of objects (persons)
  */
-package se.uu.bmc.it.foa.examples;
+package se.nowise.foa.examples;
 
 import se.nowise.foa.Entity;
 import se.nowise.foa.Encoder;
@@ -27,7 +27,7 @@ import java.util.logging.Logger;
 
 /**
  * Example on encoding array of objects.
- * @author Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class EncodeObjectArray {
 

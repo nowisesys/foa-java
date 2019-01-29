@@ -12,7 +12,7 @@
  * BufferEncoder.java
  *
  * Created: Apr 1, 2009, 2:53:26 AM
- * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * Author:  Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 package se.nowise.foa;
 
@@ -23,7 +23,7 @@ import java.io.IOException;
  * Decoder class. It also redefines how the write() member function behaves by always returning the
  * string buffer containing the last encoded FOA entity.
  *
- * @author Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class BufferEncoder {
 

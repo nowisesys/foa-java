@@ -12,12 +12,12 @@
  * DecodeStringBuffer.java
  *
  * Created: Apr 1, 2009, 12:39:36 AM
- * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * Author:  Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  *
  * Description:
  * Demonstrate decoding an string buffer.
  */
-package se.uu.bmc.it.foa.examples;
+package se.nowise.foa.examples;
 
 import se.nowise.foa.Entity;
 import se.nowise.foa.Decoder;
@@ -29,7 +29,7 @@ import java.util.logging.Logger;
 /**
  * Example on decoding string buffer.
  * 
- * @author Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class DecodeStringBuffer {
 

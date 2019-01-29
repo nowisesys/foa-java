@@ -12,12 +12,12 @@
  * SetMemoryStrategy.java
  *
  * Created: Apr 1, 2009, 2:00:40 PM
- * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * Author:  Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  *
  * Description:
  * Demonstration on various aspects of the MemoryStrategy class.
  */
-package se.uu.bmc.it.foa.examples;
+package se.nowise.foa.examples;
 
 import se.nowise.foa.Decoder;
 import se.nowise.foa.MemoryStrategy;
@@ -27,7 +27,7 @@ import java.util.logging.Logger;
 
 /**
  * Example on using various memory strategies.
- * @author Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class SetMemoryStrategy {
 

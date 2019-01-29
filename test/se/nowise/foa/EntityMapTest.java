@@ -8,7 +8,7 @@
  * GNU Classpath Exception. See the file COPYING and COPYING.CLASSPATH bundled
  * with the foa-java source or visit http://www.gnu.org
  */
-package se.uu.bmc.it.foa;
+package se.nowise.foa;
 
 import se.nowise.foa.EntityMap;
 import java.util.HashMap;
@@ -21,7 +21,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class EntityMapTest {
 

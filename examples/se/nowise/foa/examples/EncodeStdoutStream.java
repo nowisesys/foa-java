@@ -12,7 +12,7 @@
  * EncodeStdoutStream.java
  *
  * Created: Apr 1, 2009, 1:06:45 PM
- * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * Author:  Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  *
  * Description:
  * Demonstrate how to make encoded data be written to stdout without
@@ -21,7 +21,7 @@
  * This example uses System.out as output stream, but in practice any buffered
  * or unbuffered Writer anchestor class could be used.
  */
-package se.uu.bmc.it.foa.examples;
+package se.nowise.foa.examples;
 
 import se.nowise.foa.Entity;
 import se.nowise.foa.Encoder;
@@ -31,7 +31,7 @@ import java.util.logging.Logger;
 
 /**
  * Example on encoding data to stdout stream.
- * @author Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class EncodeStdoutStream {
 

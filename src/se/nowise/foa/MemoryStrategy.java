@@ -12,7 +12,7 @@
  * MemoryStrategy.java
  *
  * Created: Mar 31, 2009, 5:05:49 PM
- * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * Author:  Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 package se.nowise.foa;
 
@@ -21,7 +21,7 @@ package se.nowise.foa;
  * user of the decoder class an option to define how aggressive memory gets allocated, as well as,
  * giving an opportunity to set the maximum number of bytes used for input buffer.
  *
- * @author Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class MemoryStrategy {
 

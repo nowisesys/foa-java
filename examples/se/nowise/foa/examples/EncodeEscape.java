@@ -12,12 +12,12 @@
  * EncodeEscape.java
  *
  * Created: Mar 31, 2009, 12:20:02 AM
- * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * Author:  Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  *
  * Description:
  * Test escaping of special chars in output.
  */
-package se.uu.bmc.it.foa.examples;
+package se.nowise.foa.examples;
 
 import se.nowise.foa.EncoderException;
 import se.nowise.foa.Encoder;
@@ -27,7 +27,7 @@ import java.util.logging.Logger;
 
 /**
  * Example on escape encoded data.
- * @author Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class EncodeEscape {
 

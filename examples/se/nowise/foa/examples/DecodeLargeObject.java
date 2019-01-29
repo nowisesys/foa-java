@@ -12,13 +12,13 @@
  * DecodeLargeObject.java
  *
  * Created: Apr 1, 2009, 4:55:37 PM
- * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * Author:  Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  *
  * Description:
  * Test parsing a large object. Running this example might generate an
  * OutOfMemoryError exception.
  */
-package se.uu.bmc.it.foa.examples;
+package se.nowise.foa.examples;
 
 import se.nowise.foa.Entity;
 import se.nowise.foa.Decoder;
@@ -29,7 +29,7 @@ import java.util.logging.Logger;
 
 /**
  * Example on decode large number of objects.
- * @author Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class DecodeLargeObject {
 

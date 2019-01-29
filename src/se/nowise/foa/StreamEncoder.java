@@ -12,7 +12,7 @@
  * StreamEncoder.java
  *
  * Created: Apr 1, 2009, 2:38:24 AM
- * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * Author:  Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 package se.nowise.foa;
 
@@ -25,7 +25,7 @@ import java.io.Writer;
  * This is a convenience class that wraps up the stream functionality of the more generic Decoder
  * class.
  *
- * @author Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class StreamEncoder {
 

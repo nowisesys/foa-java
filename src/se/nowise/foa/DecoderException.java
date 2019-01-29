@@ -12,14 +12,14 @@
  * DecoderException.java
  *
  * Created: Mar 30, 2009, 1:51:15 PM
- * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * Author:  Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 package se.nowise.foa;
 
 /**
  * The exception thrown by various methods in class Decoder.
  *
- * @author Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class DecoderException extends Exception {
 

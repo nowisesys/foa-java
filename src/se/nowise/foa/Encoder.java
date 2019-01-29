@@ -12,7 +12,7 @@
  * Encoder.java
  *
  * Created: Mar 30, 2009, 1:50:13 PM
- * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * Author:  Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 package se.nowise.foa;
 
@@ -24,7 +24,7 @@ import java.io.OutputStreamWriter;
 /**
  * This class implements the encoder part of the FOA specification.
  *
- * @author Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class Encoder {
 

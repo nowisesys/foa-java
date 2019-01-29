@@ -12,7 +12,7 @@
  * EncodeStringStream.java
  *
  * Created: Apr 1, 2009, 1:42:27 PM
- * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * Author:  Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  *
  * Description:
  * Demonstrate how to use a StringWriter as destination stream for encoded
@@ -23,7 +23,7 @@
  * data gets flushed to the underlying stream (can be important in some
  * situations, i.e. when doing output buffring on web applications).
  */
-package se.uu.bmc.it.foa.examples;
+package se.nowise.foa.examples;
 
 import se.nowise.foa.Entity;
 import se.nowise.foa.Encoder;
@@ -34,7 +34,7 @@ import java.util.logging.Logger;
 
 /**
  * Example on encoding to string stream.
- * @author Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class EncodeStringStream {
 

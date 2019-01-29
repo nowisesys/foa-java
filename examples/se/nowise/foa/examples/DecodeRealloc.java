@@ -12,7 +12,7 @@
  * DecodeRealloc.java
  *
  * Created: Apr 1, 2009, 10:03:19 PM
- * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * Author:  Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  *
  * Description:
  * Test that realloc works when decoding by setting a silly
@@ -20,7 +20,7 @@
  * decoded character.
  *
  */
-package se.uu.bmc.it.foa.examples;
+package se.nowise.foa.examples;
 
 import se.nowise.foa.Entity;
 import se.nowise.foa.Decoder;
@@ -34,7 +34,7 @@ import java.util.logging.Logger;
 
 /**
  * Example on decode using small memory buffer (realloc in each iteration).
- * @author Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class DecodeRealloc {
 

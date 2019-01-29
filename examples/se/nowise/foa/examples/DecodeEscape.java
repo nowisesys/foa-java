@@ -12,12 +12,12 @@
  * DecodeEscape.java
  *
  * Created: Apr 1, 2009, 3:07:19 PM
- * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * Author:  Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  *
  * Description:
  * Tests decoding escaped input data from an memory buffer.
  */
-package se.uu.bmc.it.foa.examples;
+package se.nowise.foa.examples;
 
 import se.nowise.foa.Entity;
 import se.nowise.foa.Decoder;
@@ -29,7 +29,7 @@ import java.util.logging.Logger;
 /**
  * Example on decode escaped data.
  * 
- * @author Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
+ * @author Anders Lövgren (Nowise Systems/BMC-IT, Uppsala University)
  */
 public class DecodeEscape {
 
