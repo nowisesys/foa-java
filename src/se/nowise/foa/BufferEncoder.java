@@ -70,7 +70,7 @@ public class BufferEncoder {
      *
      * @param spec The special char.
      * @return String
-     * @see se.uu.bmc.it.foa.Entity.SpecialChar
+     * @see se.nowise.foa.Entity.SpecialChar
      * @throws java.io.IOException
      */
     public String write(Entity.SpecialChar spec) throws IOException {
@@ -84,7 +84,7 @@ public class BufferEncoder {
      * @param name The name of the special char.
      * @param spec The special char.
      * @return String
-     * @see se.uu.bmc.it.foa.Entity.SpecialChar
+     * @see se.nowise.foa.Entity.SpecialChar
      * @throws java.io.IOException
      */
     public String write(String name, Entity.SpecialChar spec) throws IOException {

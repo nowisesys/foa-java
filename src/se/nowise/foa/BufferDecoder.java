@@ -119,7 +119,7 @@ public class BufferDecoder {
      * @return The next entity or null if no more entities exist in buffer.
      * @throws IOException
      * @throws se.nowise.foa.DecoderException
-     * @see se.uu.bmc.it.foa.Decoder#read() for details.
+     * @see se.nowise.foa.Decoder#read() for details.
      */
     public Entity read() throws IOException, DecoderException {
         return decoder.read();

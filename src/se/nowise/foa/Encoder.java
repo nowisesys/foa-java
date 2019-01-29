@@ -61,7 +61,7 @@ public class Encoder {
      * Sets the associated write stream.
      *
      * @param stream The output character stream.
-     * @see se.uu.bmc.it.foa.Encoder#Encoder(java.io.Writer)
+     * @see se.nowise.foa.Encoder#Encoder(java.io.Writer)
      */
     public void setStream(Writer stream) {
         this.writer = stream;
@@ -71,7 +71,7 @@ public class Encoder {
      * Sets the associated write stream.
      *
      * @param stream The output character stream.
-     * @see se.uu.bmc.it.foa.Encoder#Encoder(java.io.Writer)
+     * @see se.nowise.foa.Encoder#Encoder(java.io.Writer)
      */
     public void setStream(OutputStream stream) {
         if (stream != null) {
@@ -101,7 +101,7 @@ public class Encoder {
      * Write an anonymous special char entity to the buffer.
      *
      * @param spec The special char.
-     * @see se.uu.bmc.it.foa.Entity.SpecialChar
+     * @see se.nowise.foa.Entity.SpecialChar
      * @throws java.io.IOException
      */
     public void write(Entity.SpecialChar spec) throws IOException {
@@ -116,7 +116,7 @@ public class Encoder {
      *
      * @param name The name of the special char.
      * @param spec The special char.
-     * @see se.uu.bmc.it.foa.Entity.SpecialChar
+     * @see se.nowise.foa.Entity.SpecialChar
      * @throws java.io.IOException
      */
     public void write(String name, Entity.SpecialChar spec) throws IOException {
