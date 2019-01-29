@@ -19,7 +19,8 @@
  */
 package se.uu.bmc.it.foa.examples;
 
-import se.uu.bmc.it.foa.*;
+import se.nowise.foa.Entity;
+import se.nowise.foa.Encoder;
 import java.io.FileWriter;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;

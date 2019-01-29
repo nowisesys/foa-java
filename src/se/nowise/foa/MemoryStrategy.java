@@ -14,7 +14,7 @@
  * Created: Mar 31, 2009, 5:05:49 PM
  * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
  */
-package se.uu.bmc.it.foa;
+package se.nowise.foa;
 
 /**
  * This class implements a memory allocation strategy to be used by the Decoder class. It gives the

@@ -14,7 +14,7 @@
  * Created: Apr 1, 2009, 2:53:26 AM
  * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
  */
-package se.uu.bmc.it.foa;
+package se.nowise.foa;
 
 import java.io.IOException;
 
@@ -48,7 +48,7 @@ public class BufferEncoder {
      *
      * @param option The option to set.
      * @param val The option value.
-     * @throws se.uu.bmc.it.foa.EncoderException
+     * @throws se.nowise.foa.EncoderException
      */
     public void setOption(Encoder.Option option, boolean val) throws EncoderException {
         encoder.setOption(option, val);
@@ -59,7 +59,7 @@ public class BufferEncoder {
      *
      * @param option The option to get true or false of.
      * @return The option value.
-     * @throws se.uu.bmc.it.foa.EncoderException
+     * @throws se.nowise.foa.EncoderException
      */
     public boolean getOption(Encoder.Option option) throws EncoderException {
         return encoder.getOption(option);

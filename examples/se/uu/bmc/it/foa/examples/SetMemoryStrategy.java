@@ -19,9 +19,11 @@
  */
 package se.uu.bmc.it.foa.examples;
 
+import se.nowise.foa.Decoder;
+import se.nowise.foa.MemoryStrategy;
+import se.nowise.foa.DecoderException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import se.uu.bmc.it.foa.*;
 
 /**
  * Example on using various memory strategies.

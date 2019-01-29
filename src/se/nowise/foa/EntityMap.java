@@ -14,7 +14,7 @@
  * Created: Apr 1, 2009, 7:15:06 PM
  * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
  */
-package se.uu.bmc.it.foa;
+package se.nowise.foa;
 
 import java.util.HashMap;
 

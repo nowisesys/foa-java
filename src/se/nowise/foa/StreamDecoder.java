@@ -14,7 +14,7 @@
  * Created: Apr 1, 2009, 3:10:30 AM
  * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
  */
-package se.uu.bmc.it.foa;
+package se.nowise.foa;
 
 import java.io.Reader;
 import java.io.IOException;
@@ -80,7 +80,7 @@ public class StreamDecoder {
      * Set the memory allocation strategy to be used when reading data from the input stream.
      *
      * @param strategy The memory allocation strategy.
-     * @throws se.uu.bmc.it.foa.DecoderException if max size is smaller than current used size.
+     * @throws se.nowise.foa.DecoderException if max size is smaller than current used size.
      * @see se.uu.bmc.it.foa.Decoder#setStrategy(se.uu.bmc.it.foa.MemoryStrategy) for details.
      */
     public void setStrategy(MemoryStrategy strategy) throws DecoderException {
@@ -101,7 +101,7 @@ public class StreamDecoder {
      *
      * @param option The option to set.
      * @param val The option value.
-     * @throws se.uu.bmc.it.foa.DecoderException
+     * @throws se.nowise.foa.DecoderException
      */
     public void setOption(Decoder.Option option, boolean val) throws DecoderException {
         decoder.setOption(option, val);
@@ -112,7 +112,7 @@ public class StreamDecoder {
      *
      * @param option The option to get true or false of.
      * @return The option value.
-     * @throws se.uu.bmc.it.foa.DecoderException
+     * @throws se.nowise.foa.DecoderException
      */
     public boolean getOption(Decoder.Option option) throws DecoderException {
         return decoder.getOption(option);
@@ -123,7 +123,7 @@ public class StreamDecoder {
      *
      * @return The next entity or null on end of stream.
      * @throws IOException
-     * @throws se.uu.bmc.it.foa.DecoderException
+     * @throws se.nowise.foa.DecoderException
      * @see se.uu.bmc.it.foa.Decoder#read() for details.
      */
     public Entity read() throws IOException, DecoderException {

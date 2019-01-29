@@ -10,6 +10,9 @@
  */
 package se.uu.bmc.it.foa;
 
+import se.nowise.foa.MemoryStrategy;
+import se.nowise.foa.Entity;
+import se.nowise.foa.Decoder;
 import java.io.Reader;
 import java.io.InputStreamReader;
 import org.junit.After;
@@ -18,7 +21,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import se.uu.bmc.it.foa.Decoder.Option;
+import se.nowise.foa.Decoder.Option;
 
 /**
  * Unit test for class Decoder.

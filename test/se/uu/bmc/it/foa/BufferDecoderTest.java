@@ -10,13 +10,15 @@
  */
 package se.uu.bmc.it.foa;
 
+import se.nowise.foa.BufferDecoder;
+import se.nowise.foa.Entity;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import se.uu.bmc.it.foa.Decoder.Option;
+import se.nowise.foa.Decoder.Option;
 
 /**
  * Unit test for class BufferDecoder.

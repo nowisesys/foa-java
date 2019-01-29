@@ -10,6 +10,7 @@
  */
 package se.uu.bmc.it.foa;
 
+import se.nowise.foa.MemoryStrategy;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

@@ -10,6 +10,7 @@
  */
 package se.uu.bmc.it.foa;
 
+import se.nowise.foa.EntityMap;
 import java.util.HashMap;
 import org.junit.After;
 import org.junit.AfterClass;

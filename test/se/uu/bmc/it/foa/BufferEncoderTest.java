@@ -10,14 +10,15 @@
  */
 package se.uu.bmc.it.foa;
 
+import se.nowise.foa.BufferEncoder;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import se.uu.bmc.it.foa.Encoder.Option;
-import se.uu.bmc.it.foa.Entity.SpecialChar;
+import se.nowise.foa.Encoder.Option;
+import se.nowise.foa.Entity.SpecialChar;
 
 /**
  * Unit test for class BufferEncoder.

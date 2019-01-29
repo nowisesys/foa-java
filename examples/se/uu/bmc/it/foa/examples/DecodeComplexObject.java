@@ -19,7 +19,7 @@ package se.uu.bmc.it.foa.examples;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import se.uu.bmc.it.foa.DecoderException;
+import se.nowise.foa.DecoderException;
 
 /**
  * Example on decoding complex objects.

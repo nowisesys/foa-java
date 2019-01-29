@@ -23,7 +23,8 @@
  */
 package se.uu.bmc.it.foa.examples;
 
-import se.uu.bmc.it.foa.*;
+import se.nowise.foa.Entity;
+import se.nowise.foa.Encoder;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;

@@ -14,7 +14,7 @@
  * Created: Apr 1, 2009, 3:10:00 AM
  * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
  */
-package se.uu.bmc.it.foa;
+package se.nowise.foa;
 
 import java.io.IOException;
 
@@ -96,7 +96,7 @@ public class BufferDecoder {
      *
      * @param option The option to set.
      * @param val The option value.
-     * @throws se.uu.bmc.it.foa.DecoderException
+     * @throws se.nowise.foa.DecoderException
      */
     public void setOption(Decoder.Option option, boolean val) throws DecoderException {
         decoder.setOption(option, val);
@@ -107,7 +107,7 @@ public class BufferDecoder {
      *
      * @param option The option to get boolean value of.
      * @return The option value.
-     * @throws se.uu.bmc.it.foa.DecoderException
+     * @throws se.nowise.foa.DecoderException
      */
     public boolean getOption(Decoder.Option option) throws DecoderException {
         return decoder.getOption(option);
@@ -118,7 +118,7 @@ public class BufferDecoder {
      *
      * @return The next entity or null if no more entities exist in buffer.
      * @throws IOException
-     * @throws se.uu.bmc.it.foa.DecoderException
+     * @throws se.nowise.foa.DecoderException
      * @see se.uu.bmc.it.foa.Decoder#read() for details.
      */
     public Entity read() throws IOException, DecoderException {

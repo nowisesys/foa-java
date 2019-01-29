@@ -14,7 +14,7 @@
  * Created: Mar 30, 2009, 1:50:13 PM
  * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
  */
-package se.uu.bmc.it.foa;
+package se.nowise.foa;
 
 import java.io.Writer;
 import java.io.IOException;
@@ -246,7 +246,7 @@ public class Encoder {
      *
      * @param option The option to set.
      * @param val The option value.
-     * @throws se.uu.bmc.it.foa.EncoderException
+     * @throws se.nowise.foa.EncoderException
      */
     public void setOption(Option option, boolean val) throws EncoderException {
         if (option == Option.EnableEscape) {
@@ -261,7 +261,7 @@ public class Encoder {
      *
      * @param option The option to get true or false of.
      * @return The option value.
-     * @throws se.uu.bmc.it.foa.EncoderException
+     * @throws se.nowise.foa.EncoderException
      */
     public boolean getOption(Option option) throws EncoderException {
         if (option == Option.EnableEscape) {

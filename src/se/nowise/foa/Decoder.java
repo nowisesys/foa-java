@@ -14,7 +14,7 @@
  * Created: Mar 30, 2009, 1:50:40 PM
  * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
  */
-package se.uu.bmc.it.foa;
+package se.nowise.foa;
 
 import java.io.Reader;
 import java.io.IOException;
@@ -222,7 +222,7 @@ public class Decoder {
      *
      * @param option The option to set.
      * @param val The option value.
-     * @throws se.uu.bmc.it.foa.DecoderException
+     * @throws se.nowise.foa.DecoderException
      */
     public void setOption(Option option, boolean val) throws DecoderException {
         if (option == Option.EnableEscape) {
@@ -237,7 +237,7 @@ public class Decoder {
      *
      * @param option The option to get true or false of.
      * @return The option value.
-     * @throws se.uu.bmc.it.foa.DecoderException
+     * @throws se.nowise.foa.DecoderException
      */
     public boolean getOption(Option option) throws DecoderException {
         if (option == Option.EnableEscape) {

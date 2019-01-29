@@ -14,7 +14,7 @@
  * Created: Mar 30, 2009, 10:35:02 PM
  * Author:  Anders Lövgren (Nowise Systems/Uppsala University (BMC-IT))
  */
-package se.uu.bmc.it.foa;
+package se.nowise.foa;
 
 /**
  *

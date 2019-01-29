@@ -22,7 +22,10 @@
  */
 package se.uu.bmc.it.foa.examples;
 
-import se.uu.bmc.it.foa.*;
+import se.nowise.foa.Entity;
+import se.nowise.foa.Decoder;
+import se.nowise.foa.MemoryStrategy;
+import se.nowise.foa.DecoderException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.FileNotFoundException;
