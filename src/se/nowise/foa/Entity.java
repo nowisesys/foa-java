@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2009-2018 Anders Lövgren (Nowise Systems/Uppsala University)
+ * Copyright (C) 2009-2019 Anders Lövgren (Nowise Systems/Uppsala University)
  *
  * FOA Java Library (foa-java) - An Java (tm) library implementation of the FOA
  * specification: http://it.bmc.uu.se/andlov/proj/libfoa/spec.php
